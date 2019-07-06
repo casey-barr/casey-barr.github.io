@@ -1,0 +1,6 @@
+theme: jekyll-theme-minimal
+title: Casey C. Barr
+markdown: kramdown
+description: AI, Machine Learning, and Econometrics
+
+permalink: /blog/:year/:month/:day/:title
