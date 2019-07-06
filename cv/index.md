@@ -14,7 +14,7 @@ title: CV
 
 ### Research Positions
 
-&nbsp;&nbsp;&nbsp;&nbsp;2016–2017 \| **Economic Policy Analyst**, Florida State Economics Department
+&nbsp;&nbsp;&nbsp;&nbsp;2016–2017 \| **Economist**, Florida State Economics Department
 
 ### Work Experience
 
