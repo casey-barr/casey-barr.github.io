@@ -8,11 +8,23 @@ title: Reading Log
 
 ### Artificial Intelligence
 
+[2019-07-31 - A Critique of Pure Learning: What Artifical Neural Networks can Learn from Animal Brains](https://www.biorxiv.org/content/biorxiv/early/2019/03/20/582643.full.pdf)
+
 [2019-06-13 - Text-based Editing of Talking-head Video](https://arxiv.org/abs/1906.01524)
 
 [2019-06-06 - Speech2Face: Learning the Face Behind a Voice](https://arxiv.org/pdf/1905.09773.pdf)
 
 [2019-06-02 - How to do Research At the MIT AI Lab](https://dspace.mit.edu/bitstream/handle/1721.1/41487/AI_WP_316.pdf)
+
+***A Critique of Pure Learning: What Artifical Neural Networks can Learn from Animal Brains*** - Anthony M. Zador
+
+>"In this view, supervised learning in ANNs should not be viewed as the analog of learning in animals. Instead, since
+most of the data that contribute an animal’s fitness are encoded by evolution into the genome, it would perhaps be just
+as accurate (or inaccurate) to call rename it “supervised evolution.” Such a renaming would emphasize that "supervised
+learning" in ANNs is really recapitulating the extraction of statistical regularities that occurs in animals by both evolution
+and learning." 
+
+>This was really intersting. I don't know that much about biology, so I'll have to re-read it sometime soon to fully understand everything.
 
 ***Text-based Editing of Talking-head Video*** - Fried, Ohad, et al.
 
