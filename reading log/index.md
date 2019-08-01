@@ -88,10 +88,16 @@ and learning."
 
 ### Misc
 
+[2019-08-01 - Inside Tokyo's audiophile venues](https://www.residentadvisor.net/features/2724)
+
 [2019-06-17 - Busy Person Patterns](https://hillside.net/plop/2006/Papers/Library/PLoP%20Busy%20Person%20Pattern%20v8.pdf#page11)
 
 [2019-02-25 - How to remember what you read: What to do before, during, and after reading anything](https://blog.rescuetime.com/how-to-remember-what-you-read/)
 
+***Inside Tokyo's audiphile venues*** - Aaron Coultate
+>"At Bridge, Ariizumi says he was taken in by the concept of the "Third Place," a term used by American sociologist Ray Oldenburg loosely defined as somewhere for people to relax and mingle in between their time at work and home .... I wanted to have a space where people can get away from stress, from tiring days, to take it easy and relax. Those are ordinary, but important, things in our lives."
+
+>Tokyo, in general, seems like such a great place. My next holiday I plan to go there.
 
 ***Busy Person Patterns*** - James F. Kile, Donald J. Little, Samir Shah
 
