@@ -6,11 +6,11 @@ title: Reading Log
 
 ### A reading log for the most recent, interesting articles or academic papers that I read to help me remember what exactly it was that I found interesting in the first place.
 
-[Artificial Intelligence](#Artificial-Intelligence)  
-- [Machine Learning](#Machine-Learning)
+[Artificial Intelligence](#artificial-intelligence)  
+- [Machine Learning](#machine-learning)
 
-[Economics](#Economics)  
-[Misc](#Misc)  
+[Economics](#economics)  
+[Misc](#misc)  
 
 ### Artificial Intelligence
 
