@@ -7,7 +7,8 @@ title: Reading Log
 ### A reading log for the most recent, interesting articles or academic papers that I read to help me remember what exactly it was that I found interesting in the first place.
 
 [Artificial Intelligence](#Artificial-Intelligence)  
-[Machine Learning](#Machine-Learning)  
+- [Machine Learning](#Machine-Learning)  
+
 [Economics](#Economics)  
 [Misc](#Misc)  
 
