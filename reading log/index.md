@@ -30,7 +30,7 @@ as accurate (or inaccurate) to call rename it “supervised evolution.” Such a
 learning" in ANNs is really recapitulating the extraction of statistical regularities that occurs in animals by both evolution
 and learning." 
 
->This was really intersting. I don't know that much about biology, so I'll have to re-read it sometime soon to fully understand everything.
+>This was really interesting. I don't know that much about biology, so I'll have to re-read it sometime soon to fully understand everything.
 
 ***Text-based Editing of Talking-head Video*** - Fried, Ohad, et al.
 
@@ -44,12 +44,19 @@ and learning."
 
 ### Machine Learning
 
+[2019-08-09 - A Recipe for Training Neural Networks](http://karpathy.github.io/2019/04/25/recipe/)
+
 [2019-06-21 - Searching for Activation Functions](https://arxiv.org/pdf/1710.05941;%20http://arxiv.org/abs/1710.05941.pdf)
 
 [2019-06-16 - An Empirical Exploration of Recurrent Network Architectures](http://proceedings.mlr.press/v37/jozefowicz15.pdf)
 
 [2019-05-01 - Random Search for Hyper-Parameter Optimization](http://www.jmlr.org/papers/volume13/bergstra12a/bergstra12a.pdf)
 
+
+***A Recipe for Training Neural Networks*** - Andrej Karpathy
+>"The approach I like to take to finding a good model has two stages: first get a model large enough that it can overfit (i.e. focus on training loss) and then regularize it appropriately (give up some training loss to improve the validation loss). The reason I like these two stages is that if we are not able to reach a low error rate with any model at all that may again indicate some issues, bugs, or misconfiguration."
+
+>Interesting. Different from how I approach training neural nets, but I'm going to try this and see how this process could affect the results I'm getting now.
 
 ***Searching for Activation Functions*** - Ramachandran, Prajit, Barret Zoph, and Quoc V. Le. 
 >"We then empirically validated the best discovered activation function, which we call Swish and is defined as f(x) = x · sigmoid(βx). Our experiments used models and hyperparameters that were designed for ReLU and just replaced the ReLU activation function with Swish; even this simple, suboptimal procedure resulted in Swish consistently outperforming ReLU and other activation functions ... The simplicity of Swish and its similarity to ReLU means that replacing ReLUs in any network is just a simple one line code change."
