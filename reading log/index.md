@@ -101,11 +101,16 @@ and learning."
 
 ### Misc
 
+[2019-08-16 - Beating the Averages](http://www.paulgraham.com/avg.html)
+
 [2019-08-01 - Inside Tokyo's audiophile venues](https://www.residentadvisor.net/features/2724)
 
 [2019-06-17 - Busy Person Patterns](https://hillside.net/plop/2006/Papers/Library/PLoP%20Busy%20Person%20Pattern%20v8.pdf#page11)
 
 [2019-02-25 - How to remember what you read: What to do before, during, and after reading anything](https://blog.rescuetime.com/how-to-remember-what-you-read/)
+
+***Beating the Averages*** - Paul Graham
+>"You can't trust the opinions of the others, because of the Blub paradox: they're satisfied with whatever language they happen to use, because it dictates the way they think about programs."
 
 ***Inside Tokyo's audiphile venues*** - Aaron Coultate
 >"At Bridge, Ariizumi says he was taken in by the concept of the "Third Place," a term used by American sociologist Ray Oldenburg loosely defined as somewhere for people to relax and mingle in between their time at work and home .... I wanted to have a space where people can get away from stress, from tiring days, to take it easy and relax. Those are ordinary, but important, things in our lives."
