@@ -1,13 +1,12 @@
 title: Casey C. Barr
 markdown: kramdown
-description: AI, Machine Learning, and Econometrics
-github_username: casey-barer
+email: barrcasey@gmail.com
+github_username: casey-barr
 twitter_username: notcaseybarr
-
-permalink: /blog/:year/:month/:day/:title
 
 remote_theme: mmistakes/minimal-mistakes
 minimal_mistakes_skin: contrast
+permalink: /:categories/:title/
 paginate: 5 # number of posts
 paginate_path: /page:num/
 
@@ -17,3 +16,54 @@ include:
  plugins:
   - jekyll-paginate
   - jekyll-sitemap
+
+author:
+  name    : "Casey C. Barr"
+  avatar  : "
+  bio     : "AI, Machine Learning, and Econometrics"
+  links:
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/casey-barr"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/notcaseybarr"
+
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/casey-barr"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/notcaseybarr"
+
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
