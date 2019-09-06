@@ -1,7 +1,19 @@
 title: Casey C. Barr
 markdown: kramdown
 description: AI, Machine Learning, and Econometrics
+github_username: casey-barer
+twitter_username: notcaseybarr
 
 permalink: /blog/:year/:month/:day/:title
 
-remote_theme: mmistakes/minimal-mistakes@4.16.6
+remote_theme: mmistakes/minimal-mistakes
+minimal_mistakes_skin: contrast
+paginate: 5 # number of posts
+paginate_path: /page:num/
+
+include:
+  - _pages
+ 
+ plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
