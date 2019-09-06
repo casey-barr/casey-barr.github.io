@@ -4,3 +4,5 @@ markdown: kramdown
 description: AI, Machine Learning, and Econometrics
 
 permalink: /blog/:year/:month/:day/:title
+
+remote_theme: mmistakes/minimal-mistakes
