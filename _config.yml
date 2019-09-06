@@ -5,7 +5,7 @@ github_username: casey-barr
 twitter_username: notcaseybarr
 
 remote_theme: mmistakes/minimal-mistakes
-minimal_mistakes_skin: contrast
+minimal_mistakes_skin: "contrast"
 permalink: /:categories/:title/
 paginate: 5 # number of posts
 paginate_path: /page:num/
