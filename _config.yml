@@ -1,17 +1,17 @@
 # Site settings
-title: Casey_C_Barr
-email: barrcasey@gmail.com
-github_username: casey-barr
+title:  Casey_C_Barr
+email:  barrcasey@gmail.com
+github_username:  casey-barr
 twitter_username: notcaseybarr
-minimal_mistakes_skin: "contrast"
+minimal_mistakes_skin:  "contrast"
 search: true
 
 # Build settings
 markdown: kramdown
 remote_theme: "mmistakes/minimal-mistakes@4.16.6"
-permalink: /:categories/:title/
+permalink:  /:categories/:title/
 paginate: 5 # number of posts
-paginate_path: /page:num/
+paginate_path:  /page:num/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 include:
@@ -36,24 +36,24 @@ author:
   avatar  : ""
   bio     : "AI, Machine Learning, and Econometrics"
   links:
-    - label: "Website"
+    - label:  "Website"
       icon: "fas fa-fw fa-link"
-      url: "https://"
-    - label: "GitHub"
+      url:  "https://casey-barr.github.io"
+    - label:  "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/casey-barr"
-    - label: "Twitter"
+      url:  "https://github.com/casey-barr"
+    - label:  "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/notcaseybarr"
+      url:  "https://twitter.com/notcaseybarr"
 
 footer:
   links:
-    - label: "GitHub"
+    - label:  "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/casey-barr"
-    - label: "Twitter"
+      url:  "https://github.com/casey-barr"
+    - label:  "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/notcaseybarr"
+      url:  "https://twitter.com/notcaseybarr"
 
 defaults:
   # _posts
