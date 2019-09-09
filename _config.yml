@@ -3,15 +3,29 @@ markdown: kramdown
 email: barrcasey@gmail.com
 github_username: casey-barr
 twitter_username: notcaseybarr
-
-remote_theme: "mmistakes/minimal-mistakes@4.16.6"
 minimal_mistakes_skin: "contrast"
+search: true
+
+# Build settings
+markdown: kramdown
+remote_theme: "mmistakes/minimal-mistakes@4.16.6"
 permalink: /:categories/:title/
 paginate: 5 # number of posts
 paginate_path: /page:num/
+timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 include:
   - _pages
+ 
+ # Exclude from processing
+ # exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
  
  plugins:
   - jekyll-paginate
