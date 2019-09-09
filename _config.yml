@@ -1,24 +1,29 @@
 # Site settings
-title:  Casey_C_Barr
-email:  barrcasey@gmail.com
-github_username:  casey-barr
+title: CCB
+email: barrcasey@gmail.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Casey C. Barr - AI, Machine Learning, and Econometrics
 twitter_username: notcaseybarr
-minimal_mistakes_skin:  "contrast"
+github_username: casey-barr
+minimal_mistakes_skin: "contrast"
 search: true
 
 # Build settings
 markdown: kramdown
-remote_theme: "mmistakes/minimal-mistakes@4.16.6"
-permalink:  /:categories/:title/
-paginate: 5 # number of posts
-paginate_path:  /page:num/
+remote_theme: mmistakes/minimal-mistakes
+# Outputting
+permalink: /:categories/:title/
+paginate: 5 # amount of posts to show
+paginate_path: /page:num/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 include:
   - _pages
- 
- # Exclude from processing
- # exclude:
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
 #   - Gemfile
 #   - Gemfile.lock
 #   - node_modules
@@ -26,34 +31,39 @@ include:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
- 
- plugins:
+
+# Plugins (previously gems:)
+plugins:
   - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-include-cache
 
 author:
-  name    : "Casey C. Barr"
-  avatar  : ""
-  bio     : "AI, Machine Learning, and Econometrics"
+  name   : "First Lastname"
+  avatar : "/assets/images/bio-photo.jpg"
+  bio    : "My awesome biography constrained to a sentence or two goes here."
   links:
-    - label:  "Website"
+    - label: "Website"
       icon: "fas fa-fw fa-link"
-      url:  "https://casey-barr.github.io"
-    - label:  "GitHub"
+      url: "https://casey-barr.github.io"
+    - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url:  "https://github.com/casey-barr"
-    - label:  "Twitter"
+      url: "https://github.com/casey-barr"
+    - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      url:  "https://twitter.com/notcaseybarr"
-
+      url: "https://twitter.com/notcaseybarr"
+      
 footer:
   links:
-    - label:  "GitHub"
+    - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url:  "https://github.com/casey-barr"
-    - label:  "Twitter"
+      url: "https://github.com/"
+    - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      url:  "https://twitter.com/notcaseybarr"
+      url: "https://twitter.com/"
 
 defaults:
   # _posts
