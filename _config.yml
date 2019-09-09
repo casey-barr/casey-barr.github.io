@@ -1,5 +1,5 @@
 # Site settings
-title: CCB
+title: Casey C. Barr
 email: barrcasey@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Casey C. Barr - AI, Machine Learning, and Econometrics
@@ -43,7 +43,7 @@ plugins:
 
 author:
   name   : "Casey Barr"
-  avatar : "~"
+  avatar : "/assets/images/jupiter_amalthea_voyagerISS.jpg"
   bio    : "AI, Machine Learning, and Econometrics"
   links:
     - label: "Website"
