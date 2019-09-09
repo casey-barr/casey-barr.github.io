@@ -1,5 +1,5 @@
 # Site settings
-title: Casey C. Barr
+title: Casey_C_Barr
 email: barrcasey@gmail.com
 github_username: casey-barr
 twitter_username: notcaseybarr
@@ -33,7 +33,7 @@ include:
 
 author:
   name    : "Casey C. Barr"
-  avatar  : "
+  avatar  : ""
   bio     : "AI, Machine Learning, and Econometrics"
   links:
     - label: "Website"
