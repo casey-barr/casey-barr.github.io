@@ -5,11 +5,9 @@ main:
     url: /about/
   - title: "Blog"
     url: /blog/
-  - title: "About"
-    url: /about/
   - title: "CV"
     url: /cv/
-  - title: "Reading Log"
-    url: /reading log/
   - title: "Projects"
     url: /projects/
+  - title: "Reading Log"
+    url: /reading log/    
