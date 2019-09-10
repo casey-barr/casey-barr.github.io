@@ -14,12 +14,11 @@ $indent-var: 1.3em !default;
 
 /* system typefaces */
 $serif                        : Roboto, serif !default;
-$sans-serif                   : -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Roboto, sans-serif !default;
+$sans-serif                   : Roboto, sans-serif !default;
 $monospace                    : Monaco, Consolas, "Lucida Console", monospace !default;
 
 /* sans serif typefaces */
 $sans-serif-narrow            : $sans-serif !default;
-$helvetica                    : Roboto, "Roboto", sans-serif !default;
 
 /* serif typefaces */
 $georgia                      : Roboto, serif !default;
