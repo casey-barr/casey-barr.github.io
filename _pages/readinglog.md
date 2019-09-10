@@ -7,9 +7,9 @@ title: Reading Log
 ### A reading log for the most recent, interesting articles or academic papers that I read to help me remember what exactly it was that I found interesting in the first place.
 
 [Artificial Intelligence](#artificial-intelligence)  
-- [Machine Learning](#machine-learning)
-
+[Machine Learning](#machine-learning)  
 [Economics](#economics)  
+[Mathematics](#mathematics)  
 [Misc](#misc)  
 
 ### Artificial Intelligence
@@ -98,6 +98,16 @@ and learning."
 
 ***The Accidental Theorist*** - Paul Krugman    
 >“Nobody, it seems, warned Greider that he needed to worry about fallacies of composition, that the logic of the economy as a whole is not the same as the logic of a single market.”
+
+### Mathematics
+
+[2019-09-09 - An Interactive Introduction to Fourier Transforms](http://www.jezzamon.com/fourier/)
+
+***An Interactive Introduction to Fourier Transforms*** - Jez Swanson
+>Fourier transforms are things that let us take something and split it up into its frequencies    
+>The frequencies tell us about some fundamental properties of the data we have  
+>They can compress data by only storing the important frequencies  
+>And we can also use them to make cool looking animations with a bunch of circles  
 
 ### Misc
 
