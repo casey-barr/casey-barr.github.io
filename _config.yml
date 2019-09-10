@@ -41,6 +41,12 @@ plugins:
   - jemoji
   - jekyll-include-cache
 
+analytics:
+  provider: "google-gtag"
+  google:
+    tracking_id:  "UA-142498532-1"
+    anonymize_ip: false #default
+
 author:
   name   : "Casey Barr"
   avatar : "/assets/images/jupiter_amalthea_voyagerISS.jpg"
