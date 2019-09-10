@@ -45,6 +45,7 @@ author:
   name   : "Casey Barr"
   avatar : "/assets/images/jupiter_amalthea_voyagerISS.jpg"
   bio    : "AI, Machine Learning, and Econometrics"
+  location : "Miami, FL"
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
