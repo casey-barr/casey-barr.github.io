@@ -2,9 +2,6 @@
 permalink: /projects/
 title: "Projects"
 ---
-<br/>
-<br/>
-
 ## Software
 
 [n i g h t f a l l](https://nightfall.glitch.me/)
