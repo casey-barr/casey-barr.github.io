@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: posts
 title:  "Open AI - Taxi Reinforcement Learning Notebook"
 tags:   [open ai, reinforcement learning, machine learning, AI]
 ---
