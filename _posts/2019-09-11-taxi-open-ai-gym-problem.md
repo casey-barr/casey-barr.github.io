@@ -7,17 +7,8 @@ env = gym.make("Taxi-v2").env
 
 env.render()
 ```
-
-    +---------+
-    |[35mR[0m: | : :G|
-    | : : : : |
-    | :[43m [0m: : : |
-    | | : | : |
-    |[34;1mY[0m| : |B: |
-    +---------+
     
-    
-
+![open_ai_1](https://raw.githubusercontent.com/casey-barr/casey-barr.github.io/master/images/open_ai_1.png)
 
 ```python
 env.reset() # resert environment to a new, random state
@@ -27,13 +18,7 @@ print("Action Space {}".format(env.action_space))
 print("State Space {}".format(env.observation_space))
 ```
 
-    +---------+
-    |[35mR[0m: | : :[34;1mG[0m|
-    | : : : : |
-    | : : : : |
-    | | : | : |
-    |Y| :[43m [0m|B: |
-    +---------+
+![open_ai_2](https://raw.githubusercontent.com/casey-barr/casey-barr.github.io/master/images/open_ai_2.png)
     
     Action Space Discrete(6)
     State Space Discrete(500)
@@ -97,13 +82,7 @@ def print_frames(frames):
 print_frames(frames)
 ```
 
-    +---------+
-    |[35m[34;1m[43mR[0m[0m[0m: | : :G|
-    | : : : : |
-    | : : : : |
-    | | : | : |
-    |Y| : |B: |
-    +---------+
+![open_ai_3](https://raw.githubusercontent.com/casey-barr/casey-barr.github.io/master/images/open_ai_3.png)
       (Dropoff)
     
     Timestep: 157
