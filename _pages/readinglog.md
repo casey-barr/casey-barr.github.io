@@ -109,6 +109,8 @@ and learning."
 
 ### Misc
 
+[2019-09-11 - The Communist Plot to Assassinate George Orwell](https://lithub.com/the-communist-plot-to-assassinate-george-orwell/)
+
 [2019-08-16 - Beating the Averages](http://www.paulgraham.com/avg.html)
 
 [2019-08-01 - Inside Tokyo's audiophile venues](https://www.residentadvisor.net/features/2724)
@@ -116,6 +118,11 @@ and learning."
 [2019-06-17 - Busy Person Patterns](https://hillside.net/plop/2006/Papers/Library/PLoP%20Busy%20Person%20Pattern%20v8.pdf#page11)
 
 [2019-02-25 - How to remember what you read: What to do before, during, and after reading anything](https://blog.rescuetime.com/how-to-remember-what-you-read/)
+
+***The Communist Plot to Assassinate George Orwell*** - Duncan White
+>"The Communists had perhaps mistaken Orwell for another naive volunteer, there to be pushed around, but they had in fact made a powerful enemy, an enemy who now prepared to fight back with his trusted weapons, the typewriter and the pen."
+
+>A true champion of his ideals. I respect Orwell even more after reading about some of the adversity he had to go through.
 
 ***Beating the Averages*** - Paul Graham
 >"You can't trust the opinions of the others, because of the Blub paradox: they're satisfied with whatever language they happen to use, because it dictates the way they think about programs."
