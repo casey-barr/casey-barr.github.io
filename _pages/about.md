@@ -1,7 +1,7 @@
 ---
 permalink: /about/
 title: "About Me"
-tags: [about, casey barr, journey]
+tags: [about, casey barr, florida state]
 header:
  image: "/images/header_images/fsu.jpg"
  caption: "Photo credit: [**The Florida State University**](https://gradschool.fsu.edu/)"
