@@ -75,18 +75,20 @@ footer:
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/notcaseybarr"
 
+
 defaults:
   # _posts
   - scope:
-      path: "_posts"
+      path: ""
       type: posts
     values:
       layout: single
       author_profile: true
       read_time: true
-      comments: true
+      comments: # true
       share: true
       related: true
+      
   # _pages
   - scope:
       path: "_pages"
