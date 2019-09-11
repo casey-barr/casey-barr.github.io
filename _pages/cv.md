@@ -2,7 +2,7 @@
 permalink: /cv/
 title: CV
 ---
-**Casey C. Barr** | Curriculum Vitæ
+**Casey C. Barr** \| Curriculum Vitæ
 
 ---
 
