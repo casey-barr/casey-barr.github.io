@@ -62,6 +62,9 @@ author:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/notcaseybarr"
+    - label: "Email"
+      icon: "fas fa-envelope"
+      url: "mailto:barrcasey@gmail.com"      
       
 footer:
   links:
