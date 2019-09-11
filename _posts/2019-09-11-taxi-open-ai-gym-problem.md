@@ -82,8 +82,9 @@ def print_frames(frames):
 print_frames(frames)
 ```
 
-![open_ai_3](https://raw.githubusercontent.com/casey-barr/casey-barr.github.io/master/images/open_ai_3.png)
-      (Dropoff)
+![open_ai_3](https://raw.githubusercontent.com/casey-barr/casey-barr.github.io/master/images/open_ai_3.png)  
+
+    (Dropoff)
     
     Timestep: 157
     State: 0
