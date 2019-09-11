@@ -4,6 +4,8 @@ title:  "Open AI - Taxi Reinforcement Learning Notebook"
 tags:   [open ai, reinforcement learning, machine learning, AI]
 ---
 
+A notebook detailing how to work through the Open AI taxi reinforcement learning problem in Python 3.
+
 ```python
 import gym
 
