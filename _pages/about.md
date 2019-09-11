@@ -1,6 +1,11 @@
 ---
 permalink: /about/
 title: "About Me"
+tags: [about, Casey Barr]
+image:
+ feature: "/images/header_images/fsu.jpg"
+ credit: "Florida State University"
+ creditlink: https://gradschool.fsu.edu/
 ---
 
 ## About Me
