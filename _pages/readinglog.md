@@ -2,7 +2,7 @@
 permalink: /reading-log/
 title: Reading Log
 ---
-### A reading log for the most recent, interesting articles or academic papers that I've read to help me remember what it was that I initially found interesting.  
+### A reading log for the most interesting articles or academic papers that I've recently read to help me remember what it was that I initially found interesting.  
 &nbsp;    
 [Artificial Intelligence](#artificial-intelligence)  
 [Machine Learning](#machine-learning)  
