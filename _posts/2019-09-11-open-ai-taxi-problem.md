@@ -4,7 +4,7 @@ title:  "Open AI - Taxi Reinforcement Learning Notebook"
 tags:   [open ai, reinforcement learning, machine learning, AI]
 ---
 
-A notebook detailing how to work through the Open AI taxi reinforcement learning problem in Python 3. [Source for documentation.](https://gym.openai.com/envs/Taxi-v2/) 
+A notebook detailing how to work through the Open AI taxi reinforcement learning problem written in Python 3. [Source for environment documentation.](https://gym.openai.com/envs/Taxi-v2/) 
 
 ```python
 import gym
@@ -196,3 +196,4 @@ print(f"Average penalties per episode: {total_penalties / episodes}")
     Average timesteps per episode: 12.42
     Average penalties per episode: 0.0
     
+Here is a link to a [Jupyter notebook](https://github.com/casey-barr/open-ai-taxi-problem/blob/master/open_ai_taxi_problem.ipynb) on my GitHub if you'd like to replicate the experiment.
