@@ -1,6 +1,7 @@
 ---
 permalink: /projects/
 title: "Projects"
+tags: [projects, software, python, node.js]
 ---
 ## Software
 <br/>
