@@ -25,7 +25,7 @@ To install the package, open an Anaconda prompt terminal and type:
 pip install pandas_profiling
 ```
 
-If you're installing from a Jupyter notebook, you can instead write:
+If you're installing from a Jupyter notebook, you can instead type:
 ```python
 import sys
 !{sys.executable} -m pip install pandas_profiling
