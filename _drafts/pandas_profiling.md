@@ -35,5 +35,6 @@ import sys
 Implementing the`pandas_profiling`method is as simple as adding one extra function to the end of a pandas DataFrame. To create and output the report, add`.profile_report()`after the name of the DataFrame and execute the function, which will then output an overview display similar to the screenshot below.
 
 
+The pandas_profiling method generates a lot of interesting statistics regarding your dataset of focus, and does so in an efficient and automated way. I've since added it to my list of tools when analyzing data in Python, as it saves a lot of time when examining a large dataset that has a lot of cardinality.
 
-Here's a link to the`pandas_profiling`[GitHub page](https://github.com/pandas-profiling/pandas-profiling).
+Link to the`pandas_profiling`[GitHub page](https://github.com/pandas-profiling/pandas-profiling).
