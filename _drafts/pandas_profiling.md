@@ -32,8 +32,16 @@ import sys
 ```
 
 ## Using the package
-Implementing the`pandas_profiling`method is as simple as adding one extra function to the end of a pandas DataFrame. To create and output the report, add`.profile_report()`after the name of the DataFrame and execute the function, which will then output an overview display similar to the screenshot below.
+Implementing the`pandas_profiling`method is as simple as adding one extra function to the end of a pandas DataFrame. To create and output the report, add`.profile_report()`after the name of the DataFrame and execute the function, which will then output an overview display similar to the screenshot below. For this example, I'll be using data from the [2019 Economic Freedom of the World Index](https://www.fraserinstitute.org/economic-freedom/dataset?geozone=world&page=dataset&min-year=2&max-year=0&filter=0).
 
+```python
+import pandas as pd
+import pandas profiling
+
+pd.read_excel("https://raw.githubusercontent.com/casey-barr/misc-data/master/economic_data/efw-2019-master-index-data-for-researchers.csv").profile_report()
+```
+
+![overview](https://raw.githubusercontent.com/casey-barr/casey-barr.github.io/master/images/pandas_profiling/ewf_index_overview.png)
 
 The pandas_profiling method generates a lot of interesting statistics regarding your dataset of focus, and does so in an efficient and automated way. I've since added it to my list of tools when analyzing data in Python, as it saves a lot of time when examining a large dataset that has a lot of cardinality.
 
