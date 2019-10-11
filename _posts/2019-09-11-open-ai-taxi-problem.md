@@ -17,7 +17,7 @@ env.render()
 ![open_ai_1](https://raw.githubusercontent.com/casey-barr/casey-barr.github.io/master/images/open_ai_1.png)
 
 ```python
-env.reset() # resert environment to a new, random state
+env.reset() # reset environment to a new, random state
 env.render()
 
 print("Action Space {}".format(env.action_space))
