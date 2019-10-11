@@ -4,7 +4,7 @@ title:  "Open AI - Taxi Reinforcement Learning Notebook"
 tags:   [open ai, reinforcement learning, machine learning, AI]
 ---
 
-A notebook detailing how to work through the Open AI taxi reinforcement learning problem written in Python 3. [Source for environment documentation.](https://gym.openai.com/envs/Taxi-v2/) 
+A notebook detailing how to work through the Open AI taxi reinforcement learning problem written in Python 3. [Source for environment documentation](https://gym.openai.com/envs/Taxi-v2/). 
 
 ```python
 import gym
