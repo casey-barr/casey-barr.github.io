@@ -51,4 +51,9 @@ Below, you'll also find a gif that highlights some of the other statistics and v
 
 The pandas_profiling method generates a lot of interesting statistics regarding your dataset of focus, and does so in an efficient and automated way. I've since added it to my list of tools when analyzing data in Python, as it saves a lot of time when examining a large dataset that has a lot of cardinality.
 
-Link to the`pandas_profiling`[GitHub page](https://github.com/pandas-profiling/pandas-profiling).
+Link to the`pandas_profiling`[GitHub page](https://github.com/pandas-profiling/pandas-profiling).  
+
+
+
+<br>  
+<br>
