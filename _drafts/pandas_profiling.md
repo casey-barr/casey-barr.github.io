@@ -8,7 +8,7 @@ tags:   [python, pandas, data, statistics]
 Recently I learned of a cool Python package called`pandas_profiling`that serves as an extension of the `pandas.DataFrame.describe()` function in the pandas module. The package serves as a nice way to automate a lot of the common statistics generated when looking at data, such as the following:
 
 >**Essentials**: type, unique values, missing values  
->**Quantile statistics** ike minimum value, Q1, median, Q3, maximum, range, interquartile range  
+>**Quantile statistics** like minimum value, Q1, median, Q3, maximum, range, interquartile range  
 >**Descriptive statistics** like mean, mode, standard deviation, sum, median absolute deviation, coefficient of variation, kurtosis, skewness  
 >**Most frequent values**  
 >**Histogram**  
