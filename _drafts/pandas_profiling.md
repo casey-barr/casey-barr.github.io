@@ -43,6 +43,12 @@ pd.read_excel("https://raw.githubusercontent.com/casey-barr/misc-data/master/eco
 
 ![overview](https://raw.githubusercontent.com/casey-barr/casey-barr.github.io/master/images/pandas_profiling/ewf_index_overview.png)
 
+Below, you'll also find a gif that highlights some of the other statistics and views that the profile_report() function generates.
+
+| ![](https://raw.githubusercontent.com/casey-barr/casey-barr.github.io/master/images/pandas_profiling/p_nistrup_profiling_report.gif) | 
+|:--:| 
+| *Photo Credit: [Peter Nistrup](https://towardsdatascience.com/exploring-your-data-with-just-1-line-of-python-4b35ce21a82d)* |
+
 The pandas_profiling method generates a lot of interesting statistics regarding your dataset of focus, and does so in an efficient and automated way. I've since added it to my list of tools when analyzing data in Python, as it saves a lot of time when examining a large dataset that has a lot of cardinality.
 
 Link to the`pandas_profiling`[GitHub page](https://github.com/pandas-profiling/pandas-profiling).
