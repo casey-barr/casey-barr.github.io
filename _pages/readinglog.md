@@ -109,6 +109,8 @@ and learning."
 
 ### Misc
 
+[2019-10-15 - Write a List of Your Values and Everything Else Will Follow](https://forge.medium.com/write-a-list-of-your-values-and-everything-else-will-follow-517d2f17964e)
+
 [2019-09-11 - The Communist Plot to Assassinate George Orwell](https://lithub.com/the-communist-plot-to-assassinate-george-orwell/)
 
 [2019-08-16 - Beating the Averages](http://www.paulgraham.com/avg.html)
@@ -118,6 +120,12 @@ and learning."
 [2019-06-17 - Busy Person Patterns](https://hillside.net/plop/2006/Papers/Library/PLoP%20Busy%20Person%20Pattern%20v8.pdf#page11)
 
 [2019-02-25 - How to remember what you read: What to do before, during, and after reading anything](https://blog.rescuetime.com/how-to-remember-what-you-read/)
+
+***Write a List of Your Values and Everything Else Will Follow*** - Darius Foroux
+>Authenticity/Personal Integrity
+>Truthfulness
+>Responsibility
+>Fearlessness
 
 ***The Communist Plot to Assassinate George Orwell*** - Duncan White
 >"The Communists had perhaps mistaken Orwell for another naive volunteer, there to be pushed around, but they had in fact made a powerful enemy, an enemy who now prepared to fight back with his trusted weapons, the typewriter and the pen."
