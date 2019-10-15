@@ -24,7 +24,7 @@ channels:
 
 proxy_servers:
     http: http://user:pass@hostname:port
-    https: http://user:pass@hostname:port
+    https: https://user:pass@hostname:port
 ```
 
 <br>  
