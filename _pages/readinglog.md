@@ -122,10 +122,10 @@ and learning."
 [2019-02-25 - How to remember what you read: What to do before, during, and after reading anything](https://blog.rescuetime.com/how-to-remember-what-you-read/)
 
 ***Write a List of Your Values and Everything Else Will Follow*** - Darius Foroux
->Authenticity/Personal Integrity
->Truthfulness
->Responsibility
->Fearlessness
+>Authenticity/Personal Integrity  
+>Truthfulness  
+>Responsibility  
+>Fearlessness  
 
 ***The Communist Plot to Assassinate George Orwell*** - Duncan White
 >"The Communists had perhaps mistaken Orwell for another naive volunteer, there to be pushed around, but they had in fact made a powerful enemy, an enemy who now prepared to fight back with his trusted weapons, the typewriter and the pen."
