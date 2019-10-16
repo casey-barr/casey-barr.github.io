@@ -10,7 +10,7 @@
   @include clearfix();
   @include breakpoint(max-width $large) {
     /* fix z-index order of follow links */
-    position: fixed; // relative
+    position: relative;
     z-index: 10;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
@@ -77,10 +77,10 @@
   @include breakpoint($large) {
     position: absolute;
     top: 0;
-    left: 0; // right: 0;
+    right: 0;
     width: $right-sidebar-width-narrow;
-    margin-left: -1 * $right-sidebar-width-narrow; // margin-right
-    padding-right: 1em; // padding-left
+    margin-right: -1 * $right-sidebar-width-narrow;
+    padding-left: 1em;
     z-index: 10;
 
     &.sticky {
@@ -88,13 +88,13 @@
       position: -webkit-sticky;
       position: sticky;
       top: 2em;
-      float: left; // right
+      float: right;
     }
   }
 
   @include breakpoint($x-large) {
     width: $right-sidebar-width;
-    margin-left: -1 * $right-sidebar-width; // margin-right
+    margin-right: -1 * $right-sidebar-width;
   }
 }
 
@@ -315,4 +315,3 @@
     margin-right: initial;
   }
 }
-
