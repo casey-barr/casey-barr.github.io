@@ -1,6 +1,7 @@
 ---
 layout: posts
 title:  "Introduction to Pandas Profiling"
+classes: wide
 tags:   [python, pandas, data, statistics]
 ---
 
