@@ -2,6 +2,7 @@
 layout: posts
 title:  "Nightfall Posts from the Last Week"
 tags:   [machine learning, nightfall, AI, bot]
+classes:  wide
 ---
 
 This post is simply a collection of some of my favorite webcomics that my synthetic intelligence, [nightfall](https://nightfall.glitch.me), 
