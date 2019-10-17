@@ -89,18 +89,10 @@ def print_frames(frames):
 print_frames(frames)
 ```
 
-![open_ai_3](https://raw.githubusercontent.com/casey-barr/casey-barr.github.io/master/images/open_ai_3.png)  
+![open_ai_gif](https://raw.githubusercontent.com/casey-barr/casey-barr.github.io/master/images/ipython_frames.gif)  
 
-    (Dropoff)
-    
-    Timestep: 157
-    State: 0
-    Action: 5
-    Reward: 20
-    
 
 ## Using Q-learning to train via reinforcement 
-
 
 ```python
 import numpy as np
