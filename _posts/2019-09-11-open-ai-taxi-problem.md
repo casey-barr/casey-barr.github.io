@@ -10,7 +10,7 @@ A notebook detailing how to work through the Open AI taxi reinforcement learning
 ```python
 import gym
 
-env = gym.make("Taxi-v2").env
+env = gym.make("Taxi-v3").env
 
 env.render()
 ```
