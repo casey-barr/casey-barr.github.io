@@ -75,7 +75,9 @@ X_train, X_test, y_train, y_test = train_test_split(normalized_features, targets
 plt.imshow(X_train[0][:,:,0])
 ```
 
-Finally we get to building the model itself!
+Finally we get to building the model itself! I built a model with in [TensorFlow](https://www.tensorflow.org/) using the [tf.keras](https://www.tensorflow.org/api_docs/python/tf/keras) API.
+
+First I set the number of epochs, the batch size, and learning rate to be constants. Next up is defining the `swish` activation function, which is 
 
 ```python
 # Build CNN with Keras and the addition of swish!
