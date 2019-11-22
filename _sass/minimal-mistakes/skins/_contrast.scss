@@ -14,7 +14,8 @@ $masthead-link-color-hover: $text-color !default;
 $navicon-link-color-hover: #000 !default; /*mix(#fff, $text-color, 80%) !default;   */
 
 /* base16-grayscale-light syntax highlighting */
-$base00: #f7f7f7  !important;
+
+/*$base00: #f7f7f7  !important;
 $base01: #e3e3e3  !important;
 $base02: #b9b9b9  !important;
 $base03: #ababab  !important;
@@ -29,7 +30,25 @@ $base0b: #8e8e8e  !important;
 $base0c: #868686  !important;
 $base0d: #686868  !important;
 $base0e: #747474  !important;
-$base0f: #5e5e5e  !important;
+$base0f: #5e5e5e  !important; */
+
+/* Change to Github syntax highlighting */
+$base00: ffffff  !important;
+$base01: f5f5f5  !important; 
+$base02: c8c8fa  !important;
+$base03: 969896  !important; 
+$base04: e8e8e8  !important; 
+$base05: 333333  !important; 
+$base06: ffffff  !important;
+$base07: ffffff  !important; 
+$base08: ed6a43  !important;
+$base09: 0086b3  !important;
+$base0A: 795da3  !important;
+$base0B: 183691  !important;
+$base0C: 183691  !important;
+$base0D: 795da3  !important; 
+$base0E: a71d5d  !important; 
+$base0F: 333333  !important;
 
 .page__content {
   .notice,
