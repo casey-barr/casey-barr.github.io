@@ -5,14 +5,14 @@ classes: wide
 tags:   [kaggle, AI, machine-learning, MNIST, neural-net, CNN, convolutional-neural-net, swish]
 ---
 
-# Using a Convolutional Neural Net to Swish the Kannada MNIST challenge
+# Using a Convolutional Neural Net to Swish the Kannada MNIST Challenge
 
 
 I recently entered the [Kannada MNIST Challenge](https://www.kaggle.com/c/Kannada-MNIST) on Kaggle, which is a computer vision problem based on a derivative of the [MNIST dataset](http://yann.lecun.com/exdb/mnist/) that is extremely popular in intro to machine learning tutorials.
 
 Kannada is a language spoken predominantly by people of Karnataka in southwestern India. The language has roughly 45 million native speakers and is written using the Kannada script. The dataset is a collection of handwritten digits, like MNIST, with the goal of the competition being to design and train a model that accurately recognizes and classifies them accordingly.
 
-This notebook will be a documentation of the model I made, using Keras, with some insight into the custom activation function I decided to use in some of the layers called ['swish'](https://arxiv.org/pdf/1710.05941.pdf). I originally ran this in a Kaggle notebook, but will leave a link to both the code on my [github](___) and a [Google Colab notebook](___).
+This notebook will be a documentation of the model I made, using Keras, with some insight into the custom activation function I decided to use in some of the layers called ['Swish'](https://arxiv.org/pdf/1710.05941.pdf). I originally ran this in a Kaggle notebook, but will leave a link to both the code on my [github](___) and a [Google Colab notebook](___).
 ________
 
 To begin, I imported the standard Python packages `numpy` and `pandas`, and then `tensorflow` and checked that my notebook was connected to the GPU.
@@ -75,12 +75,14 @@ X_train, X_test, y_train, y_test = train_test_split(normalized_features, targets
 plt.imshow(X_train[0][:,:,0])
 ```
 
-Finally we get to building the model itself! I built a model with in [TensorFlow](https://www.tensorflow.org/) using the [tf.keras](https://www.tensorflow.org/api_docs/python/tf/keras) API.
+Finally we get to building the model itself! I built a model in [TensorFlow](https://www.tensorflow.org/) using the [tf.keras](https://www.tensorflow.org/api_docs/python/tf/keras) API.
 
-First I set the number of epochs, the batch size, and learning rate to be constants. Next up is defining the `swish` activation function, which is 
+First I set the number of epochs, the batch size, and learning rate to be constants. Next up is defining the `Swish` activation function, which is ***f(x) = sigmoid(β * x)***. `Swish` was found by researchers to work better than ReLU on deeper models after an experiment in which they leveraed automatic search techniques to discover new activation functions. The [paper](https://arxiv.org/abs/1710.05941) they document this in was a really good read, and I recommend it.
+
+For the model's architecture, however, I use a combination of [Conv2D](https://github.com/keras-team/keras/blob/master/keras/layers/convolutional.py#L361), [MaxPool2D](https://github.com/tensorflow/tensorflow/blob/r2.0/tensorflow/python/keras/layers/pooling.py#L282-L328), [Dropout](https://github.com/keras-team/keras/blob/master/keras/layers/core.py#L81), and [Flatten](https://github.com/keras-team/keras/blob/master/keras/layers/core.py#L462) layers to construct the model. For an optimizer, I use [Adam](https://github.com/keras-team/keras/blob/master/keras/optimizers.py#L467) with the default parameters from its original paper, and have [sparse categorical entropy](https://keras.io/losses/) as my loss function, with [accuracy](https://keras.io/metrics/#accuracy) as the evaluation metric set by the competition.
 
 ```python
-# Build CNN with Keras and the addition of swish!
+# Build CNN with Keras and the addition of Swish!
 
 # Config
 EPOCHS = 100
@@ -105,7 +107,7 @@ model = Sequential()
 
 # add layers
 model.add(Conv2D(filters=64, kernel_size=(5, 5), padding='Same', activation='relu', input_shape=(28, 28, 1)))
-model.add(Conv2D(filters=64, kernel_size=(5, 5), padding='Same', activation='relu', input_shape=(28, 28, 1)))
+model.add(Conv2D(filters=64, kernel_size=(5, 5), padding='Same', activation='swish', input_shape=(28, 28, 1)))
 model.add(MaxPool2D(pool_size=(2,2)))
 model.add(Dropout(0.25))
 
@@ -115,7 +117,7 @@ model.add(MaxPool2D(pool_size=(2, 2), strides=(2, 2)))
 model.add(Dropout(0.25))
 
 model.add(Flatten())
-model.add(Dense(256, activation='relu'))
+model.add(Dense(256, activation='swish'))
 model.add(Dropout(0.3))
 model.add(Dense(10, activation='softmax'))
 
