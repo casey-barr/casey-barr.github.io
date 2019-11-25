@@ -24,7 +24,7 @@ import numpy as np
 import tensorflow as tf
 tf.test.gpu_device_name()
 ```
-
+![gpu-check](https://raw.githubusercontent.com/casey-barr/casey-barr.github.io/master/images/kannada-images/gpu_check.png)
 
 After the GPU connection is affirmed, I import the training and test data, extract the features and targets, and print the shapes of each.
 
@@ -41,6 +41,7 @@ print("training images shape {}".format(features.shape))
 print("training labels shape {}".format(targets.shape))
 print("validation images shape {}".format(validation.shape))
 ```
+![training_validation_shape](https://raw.githubusercontent.com/casey-barr/casey-barr.github.io/master/images/kannada-images/training_test_validation_dfs.png)
 
 Next, I reshape the images in order to convert them into one-dimensional vectors, and normalize the pixel values between 0 and 1.
 
@@ -60,8 +61,8 @@ def normalize_data(df):
 normalized_features = normalize_data(flattened_features)
 normalized_validation = normalize_data(flattened_validation)
 ```
-
-
+![flattened_dfs](https://raw.githubusercontent.com/casey-barr/casey-barr.github.io/master/images/kannada-images/flattened.png)
+_____
 
 ```python
 from sklearn.model_selection import train_test_split
@@ -74,6 +75,7 @@ X_train, X_test, y_train, y_test = train_test_split(normalized_features, targets
 # viz
 plt.imshow(X_train[0][:,:,0])
 ```
+![imshow](https://raw.githubusercontent.com/casey-barr/casey-barr.github.io/master/images/kannada-images/im_show.png)
 
 Finally we get to building the model itself! I built a model in [TensorFlow](https://www.tensorflow.org/) using the [tf.keras](https://www.tensorflow.org/api_docs/python/tf/keras) API.
 
@@ -128,4 +130,4 @@ keras_optimizer = tf.keras.optimizers.Adam(lr=LEARNING_RATE)
 model.compile(optimizer=keras_optimizer, loss='sparse_categorical_crossentropy', metrics=['accuracy'])
 model.summary()
 ```
-
+![model-summary](https://raw.githubusercontent.com/casey-barr/casey-barr.github.io/master/images/kannada-images/keras_model.png)
