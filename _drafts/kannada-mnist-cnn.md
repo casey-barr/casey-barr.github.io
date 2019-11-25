@@ -12,7 +12,7 @@ I recently entered the [Kannada MNIST Challenge](https://www.kaggle.com/c/Kannad
 
 Kannada is a language spoken predominantly by people of Karnataka in southwestern India. The language has roughly 45 million native speakers and is written using the Kannada script. The dataset is a collection of handwritten digits, like MNIST, with the goal of the competition being to design and train a model that accurately recognizes and classifies them accordingly.
 
-This notebook will be a documentation of the model I made, using Keras, with some insight into the custom activation function I decided to use in some of the layers called ['Swish'](https://arxiv.org/pdf/1710.05941.pdf). I originally ran this in a Kaggle notebook, but will leave a link to both the code on my [github](___) and a [Google Colab notebook](___).
+This notebook will be a documentation of the model I made, using TensorFlow and Keras, with some insight into the custom activation function I decided to use in some of the layers called ['Swish'](https://arxiv.org/pdf/1710.05941.pdf). I originally ran this in a Kaggle notebook, but will leave a link to both the code on my [github](___) and a [Google Colab notebook](___).
 ________
 
 To begin, I imported the standard Python packages `numpy` and `pandas`, and then `tensorflow` and checked that my notebook was connected to the GPU.
@@ -93,7 +93,6 @@ LEARNING_RATE = 0.001
 
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Dropout, Flatten, Conv2D, MaxPool2D
-from tensorflow.keras import backend as k
 
 # add custom swish activation function
 from tensorflow.keras.backend import sigmoid
