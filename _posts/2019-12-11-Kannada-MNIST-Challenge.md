@@ -12,7 +12,8 @@ I recently entered the [Kannada MNIST Challenge](https://www.kaggle.com/c/Kannad
 
 Kannada is a language spoken predominantly by people of Karnataka in southwestern India. The language has roughly 45 million native speakers and is written using the Kannada script. The dataset is a collection of handwritten digits, like MNIST, with the goal of the competition being to design and train a model that accurately recognizes and classifies them accordingly.
 
-This notebook will be a documentation of the model I made, using TensorFlow and Keras, with some insight into the custom activation function I decided to use in some of the layers called ['Swish'](https://arxiv.org/pdf/1710.05941.pdf). I originally ran this in a Kaggle notebook, but will leave a link to the code on my [github](https://github.com/casey-barr/Kannada-MNIST-Challenge/blob/master/kannada-cnn-keras.ipynb).
+This notebook will be a documentation of the model I made, using TensorFlow and Keras, with some insight into the custom activation function I decided to use in some of the layers called ['Swish'](https://arxiv.org/pdf/1710.05941.pdf). I originally ran this in a Kaggle notebook, but will leave a link to the code on my [GitHub](https://github.com/casey-barr/Kannada-MNIST-Challenge/blob/master/kannada-cnn-keras.ipynb).
+
 ________
 
 To begin, I imported the standard Python packages `numpy` and `pandas`, and then `tensorflow` and checked that my notebook was connected to the GPU.
@@ -43,7 +44,7 @@ print("validation images shape {}".format(validation.shape))
 ```
 ![training_validation_shape](https://raw.githubusercontent.com/casey-barr/casey-barr.github.io/master/images/kannada-images/training_test_validation_dfs.png)
 
-Next, I reshape the images in order to convert them into one-dimensional vectors, and normalize the pixel values between 0 and 1.
+Next, I reshape the images into flattened vectors, and normalize the pixel values between 0 and 1.
 
 ```python
 # reshape images
@@ -58,8 +59,8 @@ def normalize_data(df):
   df = df / 255.
   return df
 
-normalized_features = normalize_data(flattened_features)
-normalized_validation = normalize_data(flattened_validation)
+normalized_features = normalize_data(reshaped_features)
+normalized_validation = normalize_data(reshaped_validation)
 ```
 ![flattened_dfs](https://raw.githubusercontent.com/casey-barr/casey-barr.github.io/master/images/kannada-images/flattened.png)
 _____
