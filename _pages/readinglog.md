@@ -109,6 +109,8 @@ and learning."
 
 ### Misc
 
+[2020-11-06 - A Forgotten Election Day Massacre in Florida that Still Haunts Today](https://www.ozy.com/true-and-stories/a-forgotten-election-day-massacre-in-florida-that-still-haunts-today/395395/)
+
 [2019-10-15 - Write a List of Your Values and Everything Else Will Follow](https://forge.medium.com/write-a-list-of-your-values-and-everything-else-will-follow-517d2f17964e)
 
 [2019-09-11 - The Communist Plot to Assassinate George Orwell](https://lithub.com/the-communist-plot-to-assassinate-george-orwell/)
@@ -120,6 +122,9 @@ and learning."
 [2019-06-17 - Busy Person Patterns](https://hillside.net/plop/2006/Papers/Library/PLoP%20Busy%20Person%20Pattern%20v8.pdf#page11)
 
 [2019-02-25 - How to remember what you read: What to do before, during, and after reading anything](https://blog.rescuetime.com/how-to-remember-what-you-read/)
+
+***A Forgotten Election Day Massacre in Florida that Still Haunts Today*** - Sean Braswell
+>The story of Ocoee serves as a stark reminder of America’s troubled past, but also as a warning of its far from perfect present, especially in a state that is still battling voter suppression efforts today. Democracy must constantly be fought for, and sometimes against men with guns. And what makes what those like July Perry and Mose Norman did so audacious, says Ortiz, isn’t the actions they took in the face of danger and violence. “It’s the idea that there are things more powerful than guns. There are ideas, there are beliefs in equality. That’s what animat[ed] this movement in Ocoee and that’s what we have to honor today.”
 
 ***Write a List of Your Values and Everything Else Will Follow*** - Darius Foroux
 >Authenticity/Personal Integrity  
