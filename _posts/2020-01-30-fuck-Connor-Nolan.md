@@ -1,4 +1,4 @@
-### fuck Connor nolan
+### fake ass zinc head ass chain head ass
 
 
-Pussy ass bitch nigga
+Bitch
