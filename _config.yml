@@ -1,0 +1,106 @@
+# Site settings
+title: Casey C. Barr
+email: barrcasey@gmail.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Casey C. Barr - AI, Machine Learning, and Econometrics
+twitter_username: notcaseybarr
+github_username: casey-barr
+minimal_mistakes_skin: "contrast"
+search: true
+
+# Build settings
+markdown: kramdown
+remote_theme: "mmistakes/minimal-mistakes@4.16.6"
+# Outputting
+permalink: /:categories/:title/
+paginate: 5 # amount of posts to show
+paginate_path: /page:num/
+timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
+include:
+  - _pages
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
+
+# Plugins (previously gems:)
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-include-cache
+
+analytics:
+  provider: "google-gtag"
+  google:
+    tracking_id:  "UA-142498532-1"
+    anonymize_ip: false #default
+
+author:
+  name   : "Casey Barr"
+  avatar : "/assets/images/jupiter_amalthea_voyagerISS.jpg"
+  bio    : "AI, Machine Learning, and Econometrics"
+  location : "Miami, FL"
+  links:
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://casey-barr.github.io"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/casey-barr"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/notcaseybarr"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: mailto:barrcasey@gmail.com      
+      
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/casey-barr"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/notcaseybarr"
+
+
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: # true
+      share: true
+      related: true
+    classes: wide    
+      
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
