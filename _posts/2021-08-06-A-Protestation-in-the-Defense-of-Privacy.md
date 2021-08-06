@@ -26,7 +26,7 @@ The reason I make this distinction is because perceptual hashing algorithms are 
 Apple, hypocritcally, tries to frame this egregious invasion of privacy in the first section of their **System Overview** by stating:
 >"Apple’s method of detecting known CSAM is designed with user privacy in mind. Instead of scanning images in the cloud, the system performs on-device matching using a database of known CSAM image hashes provided by NCMEC and other child-safety organizations. Apple further transforms this database into an unreadable set of hashes, which is securely stored on users’ devices."
 
-The wording of this statement is a direct example of [doublethink](https://en.wikipedia.org/wiki/Doublethink), a term coined by [George Orwell](https://en.wikipedia.org/wiki/George_Orwell) in his increasingly prognistic book [Nineteen Eighty-Four](https://en.wikipedia.org/wiki/George_Orwell). Apple is stating that will focus on consumer privacy by manipulating more of your data than it ever has before. Quite [Orwellian](https://en.wikipedia.org/wiki/Orwellian), indeed.
+The wording of this statement is a direct example of [doublethink](https://en.wikipedia.org/wiki/Doublethink), a term coined by [George Orwell](https://en.wikipedia.org/wiki/George_Orwell) in his increasingly prognistic book [Nineteen Eighty-Four](https://en.wikipedia.org/wiki/George_Orwell). Apple is stating that it will focus on consumer privacy by manipulating more of your data than it ever has before. Quite [Orwellian](https://en.wikipedia.org/wiki/Orwellian), indeed.
 
 Truthfully, in effect, Apple is introducing a backdoor that completely thwarts all the goodwill that they've built with their, now obvious, PR-framed privacy commercials [[1]](https://www.youtube.com/watch?v=gVtjp6JXWa4) [[2]](https://www.youtube.com/watch?v=FbRUQRmvC4U). 
 
@@ -34,7 +34,7 @@ I understand the need to reduce the amount of child abuse and child sex images t
 
 I urge others to get and stay informed on this topic, and any other that threatens digital privacy. A good resource is the [Electronic Frontier Foundation](https://www.eff.org/), which characterizes itself as the leading nonprofit defending digital privacy, free speech, and innovation.
 
-You can [sign an open letter](https://appleprivacyletter.com/) (I did) that protests against Apple's development and forceful implementation of this feature onto the consumers of its devices. The general mission statement of the letter is as follows:
+You can [sign an open letter](https://appleprivacyletter.com/) (I did) that protests against Apple's development and forceful implementation of this feature onto the consumers of the devices it produces. The general mission statement of the letter is as follows:
 >**Our Request**
 
 >We, the undersigned, ask that:
