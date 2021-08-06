@@ -39,7 +39,7 @@ You can [sign an open letter](https://appleprivacyletter.com/) (I did) that prot
 
 >We, the undersigned, ask that:
 
->>1. Apple Inc.'s' deployment of its proposed content monitoring technology is halted immediately.\
+>>1. Apple Inc.'s' deployment of its proposed content monitoring technology is halted immediately.
 >>2. Apple Inc. issue a statement reaffirming their commitment to end-to-end encryption and to user privacy.
 
 >Apple's current path threatens to undermine decades of work by technologists, academics and policy advocates towards strong privacy-preserving measures being the norm across a majority of consumer electronic devices and use cases. We ask that Apple reconsider its technology rollout, lest it undo that important work. 
