@@ -3,7 +3,7 @@ not financial advice, just a crypto degen thinking out loud
 
 ![treasure](https://raw.githubusercontent.com/casey-barr/casey-barr.github.io/main/images/treasure.png)
 
-I saw a [tweet](https://twitter.com/BKRoberts/status/1467873287405514754) today referenced in this article, https://decrypt.co/87675/opensea-hires-new-cfo-from-lyft-plans-ipo, on OpenSea’s new CFO hire, who was brought in to help gear the company for an eventual IPO. While it’s cool that people who built one of the most utilized protocols in the space will be allowed be compensated greatly from their efforts, it rubs me the wrong way as selling out to the suits and bankers goes against the ethos of decentralization, which is one of the selling points of Ethereum as a network. 
+I saw a [tweet](https://twitter.com/BKRoberts/status/1467873287405514754) today referenced in [this article](https://decrypt.co/87675/opensea-hires-new-cfo-from-lyft-plans-ipo), on OpenSea’s new CFO hire, who was brought in to help gear the company for an eventual IPO. While it’s cool that people who built one of the most utilized protocols in the space will be allowed be compensated greatly from their efforts, it rubs me the wrong way as selling out to the suits and bankers goes against the ethos of decentralization, which is one of the selling points of Ethereum as a network. 
 
 I sat and thought for a while this afternoon about what I think this’ll mean for NFTs and decentralization in general going forward. While I joined crypto initially to make money, what has resonated with me is the ability to do things on your own terms and support projects that align with your own values. After a little while I was reminded of token for a NFT marketplace that I threw a little extra ETH in about a week ago.
 
