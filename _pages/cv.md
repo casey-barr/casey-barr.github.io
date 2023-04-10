@@ -18,7 +18,7 @@ title: CV
 
 ### Work Experience
 
-&nbsp;&nbsp;&nbsp;&nbsp;2021–current \| **ConsenSys Inc.**, Data @ MetaMask
+&nbsp;&nbsp;&nbsp;&nbsp;2021–now  \| **ConsenSys Inc.**, Data @ MetaMask
 
 &nbsp;&nbsp;&nbsp;&nbsp;2018–2021 \| **Lufthansa Technik**
 
