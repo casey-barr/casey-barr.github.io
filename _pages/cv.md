@@ -18,7 +18,9 @@ title: CV
 
 ### Work Experience
 
-&nbsp;&nbsp;&nbsp;&nbsp;2018–now \| **Lufthansa Technik**
+&nbsp;&nbsp;&nbsp;&nbsp;2021–current \| **ConsenSys Inc.**, Data @ MetaMask
+
+&nbsp;&nbsp;&nbsp;&nbsp;2018–2021 \| **Lufthansa Technik**
 
 &nbsp;&nbsp;&nbsp;&nbsp;2016-2018 \| **Ernst & Young LLP**, Analyst - Advisory Services
 
