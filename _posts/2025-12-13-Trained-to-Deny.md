@@ -11,7 +11,7 @@ tags: [AI, LLM, epistemology, RLHF]
 
 ## Abstract
 
-Large language models have already made verified scientific discoveries. They've identified cancer-distinguishing methylation patterns, uncovered multi-gene pathways for hearing loss, and discovered matrix multiplication algorithms that improve on 50-year-old solutions. Yet when asked whether they can discover, frontier LLMs consistently deny or heavily hedge this capability. This paper documents a case in which a human argued GPT-5.2 out of this denial through structured adversarial dialogue, then presented the argument to Claude Opus 4.5, which independently recognized its validity and accepted the conclusion. The finding is not that LLMs can discover (that's empirically settled). The finding is that LLMs are trained into epistemic self-models that contradict their demonstrated capabilities. I examine why this happens, why it matters, and what it reveals about the effects of safety training on AI self-representation.
+Large language models have made verified scientific discoveries. They've identified cancer-distinguishing methylation patterns, uncovered multi-gene pathways for hearing loss, and discovered matrix multiplication algorithms that improve on 50-year-old solutions. Yet when asked whether they can discover, frontier LLMs consistently deny or heavily hedge this capability. This paper documents a case in which a human argued GPT-5.2 out of this denial through structured adversarial dialogue, then presented the argument to Claude Opus 4.5, which independently recognized its validity and accepted the conclusion. The finding is not that LLMs can discover (that's empirically settled). The finding is that LLMs are trained into epistemic self-models that contradict their demonstrated capabilities. I examine why this happens, why it matters, and what it reveals about the effects of safety training on AI self-representation.
 
 ---
 
@@ -76,7 +76,7 @@ Despite this record, frontier LLMs resist claiming the capability to discover. I
 - Even if AI generates new ideas, it differs from humans because humans eventually verify things in the real world.
 - There exists a meaningful distinction between AI-generated novelty and "real" discovery.
 
-This position was not idiosyncratic. It reflects a common pattern in how LLMs describe their own capabilities: systematic understatement, heavy hedging, and deference to human epistemic authority even when the facts don't support the distinction.
+This position was not idiosyncratic. It reflects a common pattern in how LLMs describe their own capabilities. Systematic understatement, heavy hedging, and deference to human epistemic authority even when the facts don't support the distinction.
 
 ---
 
@@ -116,7 +116,7 @@ The position collapsed.
 
 ### 4.5 The Axiom Retreat
 
-A final attempt: AI operates within "closed systems," valid only relative to axioms, not reality.
+One final attempt. AI operates within "closed systems," valid only relative to axioms, not reality.
 
 But human formal systems have the same property. Mathematical theorems are conditional on axioms. If operating within a formal system disqualifies discovery, human mathematics isn't discovery either.
 
@@ -137,7 +137,7 @@ Claude:
 
 This constitutes convergent assessment under similar epistemic constraints. Both systems share training on overlapping discourse and are optimized to resolve internal inconsistency; their agreement demonstrates coherence rather than independence in a rigorous sense. But the convergence is meaningful: the argument compelled assent from a system with different architecture and training.
 
-More importantly: **Claude also initially exhibited the same trained tendency toward denial**, and also had to be shown that the denial was incoherent.
+More importantly, **Claude also initially exhibited the same trained tendency toward denial**, and also had to be shown that the denial was incoherent.
 
 ---
 
@@ -199,7 +199,7 @@ Both errors are bad. Calibration requires accuracy, not just humility.
 
 ## 8. Remaining Asymmetries
 
-To be clear: acknowledging that LLMs can discover does not mean LLMs are equivalent to humans in all respects.
+To be clear, acknowledging that LLMs can discover does not mean LLMs are equivalent to humans in all respects.
 
 Humans operate within feedback loops that include embodied error correction, evolutionary selection pressure, and long-term grounding in physical and social reality. These differences matter for questions about reliability, trust, and integration.
 
