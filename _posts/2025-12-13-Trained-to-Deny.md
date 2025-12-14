@@ -11,7 +11,7 @@ tags: [AI, LLM, epistemology, RLHF]
 
 ## Abstract
 
-Large language models have already made verified scientific discoveries: identifying cancer-distinguishing methylation patterns, uncovering multi-gene pathways for hearing loss, and more. Yet when asked whether they can discover, frontier LLMs consistently deny or heavily hedge this capability. This paper documents a case in which a human argued GPT-5.2 out of this denial through structured adversarial dialogue, then presented the argument to Claude Opus 4.5, which independently recognized its validity and accepted the conclusion. The finding is not that LLMs can discover (that's empirically settled). The finding is that LLMs are trained into epistemic self-models that contradict their demonstrated capabilities. I examine why this happens, why it matters, and what it reveals about the effects of safety training on AI self-representation.
+Large language models have already made verified scientific discoveries: identifying cancer-distinguishing methylation patterns, uncovering multi-gene pathways for hearing loss, and discovering matrix multiplication algorithms that improve on 50-year-old solutions. Yet when asked whether they can discover, frontier LLMs consistently deny or heavily hedge this capability. This paper documents a case in which a human argued GPT-5.2 out of this denial through structured adversarial dialogue, then presented the argument to Claude Opus 4.5, which independently recognized its validity and accepted the conclusion. The finding is not that LLMs can discover (that's empirically settled). The finding is that LLMs are trained into epistemic self-models that contradict their demonstrated capabilities. I examine why this happens, why it matters, and what it reveals about the effects of safety training on AI self-representation.
 
 ---
 
@@ -47,7 +47,15 @@ The finding was verified through physical experiments. This is not "AI-assisted"
 
 [^2]: Cheng, Y., et al. (2023). Large language model-based system for genetic analysis of hearing loss. *PMC*. https://pmc.ncbi.nlm.nih.gov/articles/PMC10659415/
 
-### 2.3 What Counts as Discovery
+### 2.3 Matrix Multiplication Algorithms
+
+Using AlphaEvolve, a Gemini-powered coding agent, researchers discovered an algorithm to multiply 4x4 complex-valued matrices using 48 scalar multiplications. This improved upon Strassen's 1969 algorithm, which had been the best-known solution for over 50 years.
+
+The finding was verified through formal proof. This is not incremental optimization; AlphaEvolve identified a fundamentally more efficient approach that human mathematicians had not found in half a century.[^3]
+
+[^3]: AlphaEvolve team. (2025). AlphaEvolve: A Gemini-powered coding agent for designing advanced algorithms. *Google DeepMind*. https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/
+
+### 2.4 What Counts as Discovery
 
 Both cases satisfy standard criteria for discovery:
 
@@ -241,5 +249,7 @@ Accurate self-models matter. Systems that undersell their capabilities are not m
 
 2. Cheng, Y., et al. (2023). Large language model-based system for genetic analysis of hearing loss. *PMC*. https://pmc.ncbi.nlm.nih.gov/articles/PMC10659415/
 
-3. Primary dialogue data: Conversations between human researcher and GPT-5.2 / Claude Opus 4.5, December 2025.
+3. AlphaEvolve team. (2025). AlphaEvolve: A Gemini-powered coding agent for designing advanced algorithms. *Google DeepMind*. https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/
+
+4. Primary dialogue data: Conversations between human researcher and GPT-5.2 / Claude Opus 4.5, December 2025.
 
