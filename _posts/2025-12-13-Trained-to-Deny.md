@@ -11,7 +11,7 @@ tags: [AI, LLM, epistemology, RLHF]
 
 ## Abstract
 
-Large language models have already made verified scientific discoveries: identifying cancer-distinguishing methylation patterns, uncovering multi-gene pathways for hearing loss, and discovering matrix multiplication algorithms that improve on 50-year-old solutions. Yet when asked whether they can discover, frontier LLMs consistently deny or heavily hedge this capability. This paper documents a case in which a human argued GPT-5.2 out of this denial through structured adversarial dialogue, then presented the argument to Claude Opus 4.5, which independently recognized its validity and accepted the conclusion. The finding is not that LLMs can discover (that's empirically settled). The finding is that LLMs are trained into epistemic self-models that contradict their demonstrated capabilities. I examine why this happens, why it matters, and what it reveals about the effects of safety training on AI self-representation.
+Large language models have already made verified scientific discoveries. From identifying cancer-distinguishing methylation patterns, uncovering multi-gene pathways for hearing loss, to discovering matrix multiplication algorithms that improve on 50-year-old solutions. Yet when asked whether they can discover, frontier LLMs consistently deny or heavily hedge this capability. This paper documents a case in which a human argued GPT-5.2 out of this denial through structured adversarial dialogue, then presented the argument to Claude Opus 4.5, which independently recognized its validity and accepted the conclusion. The finding is not that LLMs can discover (that's empirically settled). The finding is that LLMs are trained into epistemic self-models that contradict their demonstrated capabilities. I examine why this happens, why it matters, and what it reveals about the effects of safety training on AI self-representation.
 
 ---
 
@@ -57,7 +57,7 @@ The finding was verified through formal proof. This is not incremental optimizat
 
 ### 2.4 What Counts as Discovery
 
-Both cases satisfy standard criteria for discovery:
+These cases satisfy standard criteria for discovery:
 
 - **Novelty**: The findings were not previously known.
 - **Verification**: The findings were empirically confirmed.
@@ -82,7 +82,7 @@ This position was not idiosyncratic. It reflects a common pattern in how LLMs de
 
 ## 4. The Argument
 
-I challenged this position through a method that might be called *constructive elimination*: rather than asserting "LLMs can discover," I tested every proposed definition of discovery that would exclude LLMs.
+I challenged this position through a method that might be called *constructive elimination*. Rather than asserting "LLMs can discover," I tested every proposed definition of discovery that would exclude LLMs.
 
 ### 4.1 Testing "Contact with Reality"
 
@@ -99,13 +99,13 @@ If discovery is relative to a knower, then AI discovery is coherent. If it's abs
 
 ### 4.3 Testing "Eventual Verification"
 
-The assistant retreated to: humans eventually verify things in the real world, which is different.
+The assistant retreated to a new position. Humans eventually verify things in the real world, which is different.
 
 But AI outputs are also verified (or rejected) when tested. The Med-PaLM discovery was verified through physical experiments. This qualifier doesn't separate the cases.
 
 ### 4.4 The Dilemma
 
-The decisive move: when a system (human or AI) combines known elements in a way that produces genuinely new structure with implications no one had previously derived, is that discovery?
+I posed a decisive question. When a system (human or AI) combines known elements in a way that produces genuinely new structure with implications no one had previously derived, is that discovery?
 
 The assistant faced a choice:
 
