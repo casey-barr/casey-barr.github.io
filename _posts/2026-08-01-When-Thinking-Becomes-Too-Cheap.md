@@ -7,7 +7,7 @@ tags: [technology, cognition, AI, philosophy]
 
 Lately, I’ve noticed myself trying to optimize experiences I haven’t had yet.
 
-Whether I’m learning to run, researching a purchase, planning a trip, or trying to learn a new skill, I increasingly find myself trying to identify the optimal path before taking the first step. I want to know which approach is best, what mistakes people usually make, and how I should sequence the work. I want the first attempt to be informed by the lessons of attempts that have not happened yet.
+Whether I’m getting into distance running, researching a purchase, planning a trip, or trying to learn a new skill, I increasingly find myself trying to identify the optimal path before taking the first step. I want to know which approach is best, what mistakes people usually make, and how I should sequence the work. I want the first attempt to be informed by the lessons of attempts that have not happened yet.
 
 At first, this felt like overthinking. Maybe I was turning simple decisions into elaborate ones. Maybe I was using research as a more respectable form of procrastination.
 
@@ -27,7 +27,7 @@ The convenience also changes the shape of uncertainty. Previously, uncertainty o
 
 ## Running exposes the limit
 
-I noticed this most clearly when I decided to learn distance running.
+I noticed this most clearly when I decided to get into distance running.
 
 Before I had established any running habit, I found myself thinking about the plan. Should I run three days a week or four? Treadmill or outside? Distance or time? How quickly should I increase my mileage? When should I introduce speed work?
 
