@@ -5,7 +5,7 @@ classes: wide
 tags: [technology, cognition, AI, philosophy]
 ---
 
-I’ve started approaching new problems differently.
+Lately, I’ve been trying to optimize experiences I haven’t had yet.
 
 Whether I’m learning to run, researching a purchase, planning a trip, or trying to learn a new skill, I increasingly find myself trying to identify the optimal path before taking the first step. I want to know which approach is best, what mistakes people usually make, and how I should sequence the work. I want the first attempt to be informed by the lessons of attempts that have not happened yet.
 
