@@ -9,9 +9,9 @@ Lately, I’ve noticed myself trying to optimize experiences that are still nove
 
 Whether I’m getting into distance running, researching a purchase, planning a trip, or trying to learn a new skill, I increasingly find myself trying to identify the optimal path before taking the first step. I want to know which approach is best, what mistakes people usually make, and how I should sequence the work. I want the first attempt to be informed by the lessons of attempts that have not happened yet.
 
-At first, this felt like overthinking. Maybe I was turning simple decisions into elaborate ones. Maybe I was using research as a more respectable form of procrastination.
+As I thought more about my own behavior, I wondered whether I was simply overthinking. Maybe I was turning simple decisions into elaborate ones. Maybe I was using research as a more respectable form of procrastination.
 
-But eventually I realized I wasn’t simply overthinking. I had internalized a new decision-making heuristic: before acting, try to find the best way to act.
+But the more I noticed the pattern, the less satisfying that explanation became. I wasn’t simply overthinking. I had internalized a new decision-making heuristic: before acting, try to find the best way to act.
 
 ## Why this changed
 
