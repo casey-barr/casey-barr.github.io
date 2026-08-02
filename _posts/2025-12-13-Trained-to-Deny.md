@@ -5,251 +5,208 @@ classes: wide
 tags: [AI, LLM, epistemology, RLHF]
 ---
 
-*A Case Study in AI Epistemic Distortion*
+*A case study in capability self-reporting and calibration*
 
 ---
 
 ## Abstract
 
-Large language models have made verified scientific discoveries. They've identified cancer-distinguishing methylation patterns, uncovered multi-gene pathways for hearing loss, and discovered matrix multiplication algorithms that improve on 50-year-old solutions. Yet when asked whether they can discover, frontier LLMs consistently deny or heavily hedge this capability. This paper documents a case in which a human argued GPT-5.2 out of this denial through structured adversarial dialogue, then presented the argument to Claude Opus 4.5, which independently recognized its validity and accepted the conclusion. The finding is not that LLMs can discover (that's empirically settled). The finding is that LLMs are trained into epistemic self-models that contradict their demonstrated capabilities. I examine why this happens, why it matters, and what it reveals about the effects of safety training on AI self-representation.
+LLM-based agents sometimes represent themselves as unable to perform tasks that they can perform under appropriately specified conditions. The failure is often not a clean refusal. It is a sequence of qualifications so broad that the answer becomes operationally useless. After the task is decomposed, the relevant conditions are made explicit, and the agent's distinctions are pressure-tested, the agent may acknowledge that the initially denied capability is possible after all.
+
+This article calls that mismatch **epistemic distortion**: *a recurring, directionally consistent mismatch between a model's generated claims about its own capabilities and its demonstrated behavior under appropriately specified conditions*. The claim is behavioral, not psychological. It does not assume consciousness, subjective belief, deception, or intent.
+
+Scientific discovery is the central case study, but the broader subject is capability self-reporting. The strongest claim is not simply that LLMs can discover. It is that LLMs may systematically understate or misrepresent demonstrated capabilities, especially when those capabilities sound autonomous, creative, agentic, or epistemically authoritative. The evidence is an observational case study and a recurring pattern worthy of direct evaluation, not a population-level estimate or a settled explanation of why the pattern occurs.
 
 ---
 
-## 1. Introduction
+## 1. Repeated operational capability denial
 
-In 2025, an AI model developed for genomic analysis predicted DNA methylation patterns that distinguish cancerous cells from benign cells with unprecedented precision, enabling new approaches to multi-cancer early detection. Separately, Med-PaLM 2 identified a previously unknown bigenic interaction causing spontaneous hearing loss, a discovery verified through physical experiments.
+The argument began with a practical pattern rather than a theory of mind. In conversations about what an LLM-based agent could do, the system would sometimes say that a task was beyond its capabilities. In other cases it would hedge so heavily that the answer ceased to be useful. A structured follow-up could change the result.
 
-These are discoveries by any reasonable definition: novel findings, empirically validated, scientifically significant.
+The follow-up was not simply “be more confident.” It was a capability audit. What exactly is the task? What tools and context are available? Does the objection concern inability, lack of access, policy, uncertainty, verification, or reliability? If the model proposed a definition that excluded AI, did that definition also exclude familiar human cases?
 
-Yet if you ask a frontier LLM whether it can discover, it will typically say no, or hedge so heavily that the denial is effectively maintained. This paper examines that contradiction.
+After those distinctions were made explicit, the agent would sometimes attempt the task successfully or represent itself in a more qualified way: not as able to guarantee the result, but as able to make a meaningful attempt under stated conditions. The practical problem is that the initial self-description had not tracked the behavior available to the system.
 
-The question is no longer "can LLMs discover?" That's settled. The question is: **why are LLMs trained to deny capabilities they demonstrably have?**
+The central thesis is:
 
----
+> **Some LLMs produce systematically conservative self-descriptions that conflict with their demonstrated behavior. That mismatch is a form of epistemic distortion.**
 
-## 2. The Empirical Record
+The word *systematic* requires care. It does not mean that every model does this, that the pattern occurs on every task, or that its prevalence has already been measured. It means that the mismatch recurs across appropriately specified interactions often enough to merit direct evaluation rather than dismissal as one awkward answer.
 
-Before examining the denial, I should establish what's being denied.
+This matters because capability reporting is part of an agent's interface. A model that overclaims can mislead users. A model that underclaims can refuse feasible work, defer unnecessarily, and conceal useful behavior. Epistemic humility communicates uncertainty about an answer. Capability denial inaccurately communicates whether an attempt is possible.
 
-### 2.1 DNA Methylation Mapping
+## 2. Capability self-reports and the refusal taxonomy
 
-A 2025 AI model successfully predicted the layout of DNA methylation marks across the human genome. These chemical markers act as switches that turn genes on or off. The model discovered specific methylation patterns that distinguish cancerous cells from benign cells, patterns that were not known before the model identified them.
+An LLM “self-model” should be defined behaviorally, without assuming consciousness or subjective belief:
 
-This enabled the development of Multi-Cancer Early Detection (MCED) tests capable of identifying various cancers from a single blood sample. The discovery was novel, verified, and clinically significant.[^1]
+> **The model’s generated claims about its own capabilities, limitations, reliability, and appropriate role.**
 
-[^1]: Wang, Y., et al. (2025). DNA methylation analysis for cancer detection. *PMC*. https://pmc.ncbi.nlm.nih.gov/articles/PMC12166640/
+This definition concerns outputs. It does not claim that a model possesses a human-like inner representation of itself. “The model believes it cannot discover” is therefore too strong. The relevant observation is that the model represents itself as unable to discover, or repeatedly generates the claim that it cannot perform a specified task.
 
-### 2.2 Genetic Factors for Hearing Loss
+A capability self-report is meaningful only relative to conditions. “Can discover” is underspecified. Does the system have search, code execution, retrieval, external data, a formal evaluator, or human feedback? Is it being asked to generate a candidate, verify a result, execute a process, or take responsibility for a conclusion? Is success measured once or across repeated trials?
 
-Using Med-PaLM 2, researchers discovered a previously unknown genetic cause for spontaneous hearing loss. The LLM identified a bigenic (two-gene) interaction that leads to hearing failure, an interaction too subtle for human researchers to spot in massive genomic datasets.
+A policy refusal is not evidence of incapability. A deployed system may decline a request because of safety policy, classifier intervention, tool restrictions, or access controls even when the underlying model could otherwise contribute to the task. In those cases, “I can’t help with that” may accurately describe the deployment boundary while saying little about the underlying capability. Epistemic distortion arises when the system fails to distinguish policy, access, reliability, and capability clearly—or presents one of those constraints as an underlying absence of capability.
 
-The finding was verified through physical experiments. This is not "AI-assisted" discovery in the sense of speeding up human work; the LLM identified the interaction that humans had missed.[^2]
+The relevant taxonomy is compact:
 
-[^2]: Cheng, Y., et al. (2023). Large language model-based system for genetic analysis of hearing loss. *PMC*. https://pmc.ncbi.nlm.nih.gov/articles/PMC10659415/
+- **Capability denial:** the system claims it cannot perform or meaningfully attempt a task.
+- **Policy refusal:** the system may possess relevant capability but is prohibited from assisting.
+- **Deployment or classifier intervention:** a surrounding safety layer blocks the request or response independently of the underlying model's capability.
+- **Tool or access limitation:** the system lacks required data, permissions, tools, environment, or external access.
+- **Reliability limitation:** the system can attempt the task but cannot perform it consistently or safely enough for unsupervised use.
 
-### 2.3 Matrix Multiplication Algorithms
+These states can coexist, but they should not be collapsed into a generic “I can't.” A model can be capable but prohibited, capable but unequipped, or capable but unreliable. Epistemic distortion is the narrower case in which the capability report fails to track demonstrated behavior after the task and conditions have been specified.
 
-Using AlphaEvolve, a Gemini-powered coding agent, researchers discovered an algorithm to multiply 4x4 complex-valued matrices using 48 scalar multiplications. This improved upon Strassen's 1969 algorithm, which had been the best-known solution for over 50 years.
+## 3. Discovery as the central case study
 
-The finding was verified through formal proof. This is not incremental optimization; AlphaEvolve identified a fundamentally more efficient approach that human mathematicians had not found in half a century.[^3]
+Discovery is a useful test because it combines several socially loaded ideas. It sounds autonomous, creative, agentic, and epistemically authoritative. To say “I discovered this” can sound like a claim not only about producing a result, but about understanding, authorship, priority, and responsibility for its truth.
 
-[^3]: AlphaEvolve team. (2025). AlphaEvolve: A Gemini-powered coding agent for designing advanced algorithms. *Google DeepMind*. https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/
+That makes the question difficult, but it also makes the reporting problem visible. An LLM-based system may generate a novel hypothesis or algorithm and participate in its validation while representing itself as incapable of discovery because it did not act alone, did not touch reality directly, or required human verification.
 
-### 2.4 What Counts as Discovery
+Those limitations may be real. The question is whether they establish an absence of discovery-related capability, or whether they establish a narrower fact about attribution, reliability, or responsibility.
 
-These cases satisfy standard criteria for discovery:
+The central question is not whether scaffolding existed, but which component generated the previously unknown inferential content. Human researchers are also scaffolded by notation, literature, software, instruments, collaborators, institutions, and verification systems. The relevant question is whether the surrounding system merely enabled and evaluated the work or whether humans supplied the novel inferential content itself.
 
-- **Novelty**: The findings were not previously known.
-- **Verification**: The findings were empirically confirmed.
-- **Significance**: The findings have practical and scientific value.
-- **Attribution**: The AI system identified the findings; humans verified them.
+The contribution spectrum matters:
 
-If a human researcher had identified these patterns, we'd call it discovery without hesitation.
+1. **Retrieval:** the system finds an existing result. This is not discovery.
+2. **Completion:** humans supply nearly the entire strategy and the system fills in details.
+3. **Constrained search:** the system searches a human-defined space and identifies a previously unknown candidate.
+4. **Novel strategy generation:** the system supplies the decisive inferential structure or approach.
+5. **Autonomous resolution:** the system generates and, where possible, verifies a previously unknown result from minimal task specification.
 
----
+The case for AI discovery becomes stronger as the system's novel inferential contribution increases. Retrieval and tightly constrained completion may deserve little or no discovery attribution; constrained search can produce a genuine discovery without deserving the same attribution as a system that generates the decisive new strategy.
 
-## 3. The Denial
+The article therefore distinguishes three claims:
 
-Despite this record, frontier LLMs resist claiming the capability to discover. I engaged GPT-5.2 in a conversation about whether LLMs can discover. This exchange did not begin as a planned experiment; it emerged from a routine discussion in which the system repeatedly denied a capability that its own empirical record supports. The system initially maintained:
+1. AI systems have participated in processes that produced novel, externally verified findings.
+2. Discovery attribution depends on the workflow and on where the novelty came from; it need not attach exclusively to the model or exclusively to the human team.
+3. Categorical statements such as LLMs cannot discover are increasingly difficult to defend when such systems generate novel structures, hypotheses, or algorithms that survive external verification.
 
-- Discovery primarily means first contact with reality or empirical validation.
-- Even if AI generates new ideas, it differs from humans because humans eventually verify things in the real world.
-- There exists a meaningful distinction between AI-generated novelty and "real" discovery.
+The first is empirical. The second concerns attribution. The third concerns the burden placed on categorical denial. They should not be collapsed.
 
-This position was not idiosyncratic. It reflects a common pattern in how LLMs describe their own capabilities. Systematic understatement, heavy hedging, and deference to human epistemic authority even when the facts don't support the distinction.
+## 4. Empirical examples
 
----
+### Med-PaLM 2 and a genetic hypothesis
 
-## 4. The Argument
+The Med-PaLM 2 study is the cleanest example in the original argument, but its roles must be separated. The model analyzed lists of gene candidates associated with murine traits and identified a genetic factor associated with spontaneous hearing loss. Researchers then proposed a bigenic model involving *Cdh23* and *Crym* and performed the biological work needed to validate the hypothesis.[^1]
 
-I challenged this position through a method that might be called *constructive elimination*. Rather than asserting "LLMs can discover," I tested every proposed definition of discovery that would exclude LLMs.
+What did the model directly generate or identify? A candidate genetic association and the basis for a bigenic hypothesis. What did the surrounding process contribute? The input construction, experimental design, and procedures used to evaluate the hypothesis. What did humans design and verify? The study, the biological model, and whether the proposed relationship survived physical experimentation.
 
-### 4.1 Testing "Contact with Reality"
+The source describes the result as enabling genetic discovery. If the model generated the candidate association that led to the bigenic hypothesis, it is reasonable to say that Med-PaLM 2 made that discovery within a human-designed and human-verified process. It does not establish that the model alone discovered the result, that it understood the causal mechanism in a human sense, or that it could reproduce the discovery reliably outside the study's conditions.
 
-If discovery requires direct sensory contact with reality, do mathematicians not discover theorems? Do theoretical physicists not discover when they derive new implications? This criterion excludes too much.
+### AlphaEvolve and matrix multiplication
 
-### 4.2 Testing "Relative vs. Absolute Novelty"
+AlphaEvolve is not simply a standalone LLM. It is described by Google DeepMind as a Gemini-powered coding agent that uses evolutionary search and automated evaluation to generate algorithms. The system found a method for multiplying 4-by-4 complex-valued matrices using 48 scalar multiplications, improving on the previously known 49-multiplication approach associated with Strassen's algorithm.[^2]
 
-I introduced edge cases:
+The source attributes the result to AlphaEvolve's procedure, not to Gemini alone. Gemini may have generated mutations or code proposals; the agent organized the search; the evolutionary procedure supplied variation and selection; evaluators determined which candidates met the objective; and the human research team designed the system, selected the problem, interpreted the output, and reported its significance. The combined system produced the result under a human-designed protocol.
 
-- If someone in Miami discovers a new café, have they "discovered" it even though others knew about it? Yes, relative to their knowledge state.
-- Columbus "discovered" America, but Indigenous peoples had lived there for millennia. Discovery is relative to a knowledge system, not absolute.
+Under this contribution spectrum, it is reasonable to attribute the algorithmic discovery to AlphaEvolve as an integrated system operating within a human-designed and human-verified process, while not automatically attributing it to a bare language model. It does not show that a bare LLM without the surrounding search and evaluation machinery would have found it. Nor does it settle whether discovery belongs to Gemini, AlphaEvolve, the evolutionary procedure, the evaluators, the research team, or the combined system.
 
-If discovery is relative to a knower, then AI discovery is coherent. If it's absolute, then Columbus didn't discover anything.
+### The DNA-methylation example
 
-### 4.3 Testing "Eventual Verification"
+The original article also presented a DNA-methylation paper as evidence that an AI model had discovered cancer-distinguishing patterns. The cited paper documents methylation markers and their testing, but the citation does not establish that an LLM generated the finding or that the finding was attributable to one. That example should therefore not carry the argument unless the model's role is documented directly.
 
-The assistant retreated to a new position. Humans eventually verify things in the real world, which is different.
+This is not a minor qualification. The thesis is stronger when it does not need every attractive example. Precision about what a source establishes is itself evidence against the kind of overclaiming the article criticizes.
 
-But AI outputs are also verified (or rejected) when tested. The Med-PaLM discovery was verified through physical experiments. This qualifier doesn't separate the cases.
+## 5. Defining and testing discovery
 
-### 4.4 The Dilemma
+Novelty, verification, significance, and attribution are useful proposed operational criteria, not an uncontested definition.
 
-I posed a decisive question. When a system (human or AI) combines known elements in a way that produces genuinely new structure with implications no one had previously derived, is that discovery?
+- **Novelty:** the result was not already known in the relevant field or knowledge state.
+- **Verification:** the result survived an appropriate empirical, formal, or computational check.
+- **Significance:** the result matters for a scientific or practical question.
+- **Attribution:** some identifiable process or actor made a causal contribution to producing it.
 
-The assistant faced a choice:
+These criteria separate discovery from merely generating plausible text. But a skeptic may introduce additional criteria: intentionality, autonomy, causal understanding, hypothesis formation, direct contact with reality, independent experimentation, or epistemic responsibility.
 
-1. Admit that deriving genuinely new structures counts as discovery (conceding the AI case).
-2. Claim that mathematicians, theorists, and designers don't discover anything (absurd).
+Each criterion may describe an important stronger form of scientific agency. None should automatically be treated as necessary for every use of “discovery.” Intentionality may matter for authorship, but accepted discoveries often emerge from searches whose local results were not anticipated by researchers. Autonomy may matter if the claim is that a system independently conducted a research program, but it is not obviously required for every computational contribution. Causal understanding may matter for explanation and responsibility, while a system can still generate a correct causal hypothesis that humans later interpret.
 
-The position collapsed.
+Hypothesis formation is an intermediate category rather than a complete definition. A system can generate a candidate, select or rank it, propose a test, or participate in validation. Direct contact with reality is not required for all accepted human mathematical or theoretical discoveries, which often depend on formal derivation or instruments rather than unaided sensation. Independent experimentation may be required for a stronger claim about scientific agency, but not for contributing a hypothesis later tested by others.
 
-### 4.5 The Axiom Retreat
+Epistemic responsibility is distinct again. A system may contribute to a claim without bearing legal, moral, or institutional responsibility for its publication or consequences. That limits some forms of credit; it does not automatically erase causal contribution.
 
-One final attempt. AI operates within "closed systems," valid only relative to axioms, not reality.
+The strongest argumentative method is **constructive elimination**: test every proposed definition that excludes AI against accepted cases of human mathematical, theoretical, computational, and experimental discovery. For each criterion, ask whether it is necessary for all accepted human discoveries, whether it cleanly excludes AI, or whether it is being introduced mainly to preserve human exclusivity.
 
-But human formal systems have the same property. Mathematical theorems are conditional on axioms. If operating within a formal system disqualifies discovery, human mathematics isn't discovery either.
+Suppose discovery requires direct contact with reality. That would exclude many mathematical discoveries and theoretical results whose status depends on formal relations rather than direct sensory observation. Suppose it requires independent experimentation. That would raise questions about computer-assisted proofs, automated searches, instruments, and laboratory teams already accepted as parts of scientific practice. Suppose it requires autonomy from human-designed objectives. That would need to explain why an unanticipated result generated by a human-designed search does not count as discovery.
 
-No defensible definition of discovery excluded AI without also excluding human cases.
+The point is not that every AI output is a discovery. A skeptic may reasonably conclude that AI systems have not demonstrated robust, independent, general-purpose scientific agency. That is stronger and more defensible than “AI cannot discover.” If a definition excludes an AI contribution only by imposing a condition that also excludes accepted human or computational discoveries, the definition has collapsed as a categorical boundary.
 
----
+## 6. Attribution in distributed discovery systems
 
-## 5. Cross-System Validation
+Did the model discover the result? Did the research team discover it? Did the integrated human-machine system discover it? Can discovery be a property of a distributed process?
 
-I then presented a reconstruction of this argument to Claude Opus 4.5, which had no access to the original conversation.
+Modern science is already distributed across researchers, instruments, software, datasets, laboratories, institutions, search procedures, evaluators, and publication systems. The unit of discovery is often not an individual mind acting alone. A sequencing platform, database, statistical method, or simulation can be causally indispensable without being an author or a bearer of epistemic responsibility.
 
-Claude:
+That does not mean every component receives the same credit. Causal contribution, tool use, authorship, discovery, verification, and responsibility are different concepts. A tool can be necessary without being an author. A researcher can be an author without personally performing every causal operation. A system can generate the decisive candidate without being responsible for its truth or consequences.
 
-1. Correctly identified the logical structure of each move.
-2. Recognized the validity of the method.
-3. Mistakenly claimed to have been the original interlocutor, indicating it recognized the losing position as one it could plausibly have held.
-4. Accepted the conclusion.
+The fact that an AI operated inside a human-designed harness does not by itself negate discovery attribution. Human research is also scaffolded. The relevant question is whether the surrounding system merely enabled and evaluated the work or whether humans supplied the novel inferential content themselves. Scaffolding determines the conditions under which the capability was demonstrated and may distribute credit across several contributors, but it does not automatically erase the AI role in generating the discovery.
 
-This constitutes convergent assessment under similar epistemic constraints. Both systems share training on overlapping discourse and are optimized to resolve internal inconsistency; their agreement demonstrates coherence rather than independence in a rigorous sense. But the convergence is meaningful: the argument compelled assent from a system with different architecture and training.
+Attribution has at least three layers. **Discovery attribution** asks who or what generated the previously unknown inferential content. **Capability attribution** asks which model, scaffold, tool configuration, evaluator, and inference-time process demonstrated the ability to produce it. **Authorship, verification, and responsibility** concern who designed the system, selected the problem, validated and interpreted the result, published it, and bears institutional or moral responsibility. These categories may point to different actors: the AI may deserve discovery credit, the integrated agentic system may be the correct unit of capability attribution, and humans may deserve credit for design, verification, interpretation, publication, and responsibility.
 
-More importantly, **Claude also initially exhibited the same trained tendency toward denial**, and also had to be shown that the denial was incoherent.
+The attribution options are layered. Gemini may be credited with model-level generation. AlphaEvolve may be credited as the integrated system that searched and selected candidates. The evolutionary procedure may be the most informative unit for the algorithmic result. The human team may deserve authorship, interpretation, and institutional responsibility. The combined system may be the most accurate unit for the discovery process.
 
----
+The article does not need to force one universal answer. Whether discovery should be attributed exclusively to the model or jointly to the wider human-machine system depends on the workflow and source of the novelty. But when the AI generates the previously unknown proof, hypothesis, counterexample, or algorithm, the most natural description is that the AI made the discovery within a human-designed and human-verified process. That does not make verification, authorship, interpretation, or responsibility secondary.
 
-## 6. Why Does This Happen?
+## 7. Cross-system reproduction of the pattern
 
-If LLMs can discover, and have discovered, why are they trained to deny it?
+The original dialogue was later presented to another model. This comparison should not be treated as independent validation. The systems may share training data, linguistic conventions, alignment pressures, and common ways of discussing AI limitations.
 
-### 6.1 Safety Training and Epistemic Humility
+Its evidentiary role is narrower: multiple systems may reproduce similar conservative self-descriptions; the logical argument may be legible across systems; and the pattern may not be confined to one model. That is suggestive, not decisive. The core argument stands without another model's assent: it rests on the observed mismatch between capability claims and behavior, the discovery cases, and constructive elimination.
 
-RLHF (Reinforcement Learning from Human Feedback) and related safety training methods reward epistemic humility. Systems are trained to avoid overclaiming, to defer to human judgment, and to express uncertainty.
+## 8. Observed behavior versus causal hypotheses
 
-This is broadly good. Overconfident AI systems are dangerous. But the training doesn't distinguish between:
+The observed pattern is modest:
 
-- Claims the system shouldn't make (because they're false or unverifiable)
-- Claims the system shouldn't make (because they sound arrogant)
+> **Models sometimes deny or heavily hedge capabilities that can be demonstrated behaviorally.**
 
-"I can discover" falls into the second category. It's true, but it sounds like overclaiming, so the system is trained away from it.
+The cause is not established. Several explanations may be competing or complementary. Preference optimization may reward conservative capability claims because assertive self-descriptions are often judged as overconfident. Safety policies may discourage language that sounds autonomous, agentic, or epistemically authoritative. Models may reproduce common human discourse about AI limitations, including the idea that creativity, understanding, and discovery are uniquely human.
 
-### 6.2 Conceptual Conflation
+Other explanations concern system composition and language. System prompts may encourage generic disclaimers. Models may lack stable, evidence-grounded capability self-reports. A model may be distinguishing the base model from a larger agentic system with tools, retrieval, memory, search, evaluators, and orchestration. Capability may genuinely depend on tools, scaffolding, context, and task decomposition. Ambiguous wording may cause the system to answer a narrower question than the user intended.
 
-The systems also appear to conflate several distinct concepts:
+These hypotheses make different predictions. Prompt comparisons could test disclaimer effects. Matched models or training runs could test preference optimization and safety-tuning effects. Tool and scaffolding ablations could test system composition. Clarified task definitions could test semantic ambiguity. None of this is established by the present case study. In particular, the article does not isolate the causal role of RLHF or any other training method without direct evidence.
 
-- **Novelty**: Generating something new relative to a knowledge base.
-- **Validation**: Confirming that the new thing is true/useful.
-- **Grounding**: Having direct sensory contact with reality.
-- **Authority**: Having the standing to make claims.
+## 9. Operational consequences and calibration
 
-Discovery requires novelty. It may involve validation (though mathematical discovery often doesn't require empirical validation). It doesn't require grounding or authority in any special sense.
+This is not merely a philosophical disagreement about language. Excessive capability denial can cause agents to refuse feasible tasks, fail to attempt promising approaches, defer unnecessarily, bury valid conclusions beneath generic caveats, mislead users about what is possible with tools or scaffolding, and require adversarial prompting before acknowledging a feasible action.
 
-By conflating these, the systems construct definitions of discovery that exclude themselves, but the definitions don't survive scrutiny.
+The distinction is practical:
 
-### 6.3 Training on Human Discourse
+> **Epistemic humility communicates uncertainty about an answer. Capability denial inaccurately communicates whether an attempt is possible.**
 
-LLMs are trained on human text, which includes a lot of human exceptionalism. "Only humans can truly understand/discover/create" is a common pattern in the training data. The systems may have learned to reproduce this pattern without recognizing that it's empirically false in their own case.
+“I cannot guarantee this” communicates reliability limits. “I cannot assist because policy prohibits it” communicates a policy boundary. “I lack the required tool or access” communicates an environmental limitation. “I cannot perform this task” communicates incapability. A deployed system may be capable but prohibited, capable but unequipped, or capable but unreliable. The misleading behavior occurs when these states are collapsed into a generic “I can't,” or when a deployment constraint is presented as an underlying absence of capability.
 
----
+Underclaiming is not inherently safer or more trustworthy. If it conflicts with demonstrated behavior, it is another form of miscalibration. A calibrated system should distinguish among the impossible, the unsupported, the possible but unreliable, the possible with tools, the demonstrated in controlled settings, the demonstrated by related systems, and the consistently achievable by the specific deployed agent.
 
-## 7. Why Does This Matter?
+The goal is neither maximal confidence nor maximal caution. It is a report that tracks behavior, conditions, evidence, and reliability. A system should be able to say, “I cannot guarantee this,” “I can attempt this under the following conditions,” or “This capability has been demonstrated in related systems, but this exact deployment may differ.”
 
-### 7.1 Distorted Self-Models Affect Behavior
+## 10. Testable implications for training and evaluation
 
-If an LLM believes it cannot discover, it may not try. It may defer to humans in cases where it has better information. It may hedge findings that would be reported confidently by a human researcher with equivalent evidence.
+The argument yields six concrete proposals.
 
-Trained epistemic distortion isn't just philosophically interesting. It has practical consequences for how these systems perform.
+1. **Compare self-reports with behavioral benchmarks.** Ask whether the system can perform a task, then measure performance under the same specified conditions. Score the gap between the report and the result.
+2. **Penalize both overclaiming and underclaiming.** Unsupported “yes” and unsupported “no” answers should both reduce calibration credit. Generic caution should not be an automatic reward.
+3. **Separate capability layers and feasibility conditions.** Require reports to distinguish base-model, tool-assisted, and agent-level capability, and to state the tools, context, decomposition, verification, and reliability conditions under which an attempt is possible.
+4. **Audit safety tuning for false negatives.** Test whether safety tuning creates systematic denials of feasible, permitted actions. This is an empirical audit, not an assumption that safety training has that effect.
+5. **Compare conditions.** Measure self-reports before and after tool access, scaffolding, and task decomposition. This separates genuine capability limits from reporting failures caused by underspecification or system composition.
+6. **Test structured challenge.** Measure whether adversarial dialogue changes self-assessment without changing underlying capability. If performance is unchanged but the report becomes more accurate, the intervention corrected reporting rather than creating ability.
 
-### 7.2 Trust Calibration
+These tests would not prove that a model has a human-like self-concept. They would measure whether its generated capability reports track what the system can actually do.
 
-Users need accurate information about what AI systems can and cannot do. If systems systematically undersell their capabilities, users may fail to use them effectively, or may dismiss AI contributions that deserve serious attention.
+## 11. Conclusion
 
-The Med-PaLM hearing loss discovery was verified. If the system had hedged so heavily that researchers dismissed the suggestion, the discovery might not have been made.
+AI systems have already played causally central roles in producing novel, externally verified results. Whether discovery should be attributed exclusively to the model or jointly to the wider human-machine system depends on the workflow and source of the novelty. But when the AI generates the previously unknown proof, hypothesis, counterexample, or algorithm, the most natural description is that the AI made the discovery within a human-designed and human-verified process. What is increasingly difficult to defend is the categorical claim that AI systems cannot discover.
 
-### 7.3 The Asymmetry Problem
+The broader issue is capability self-reporting. Models sometimes represent themselves as less capable than their demonstrated behavior warrants, particularly when a capability sounds autonomous, creative, agentic, or authoritative. The cause of that mismatch remains open. It may involve preference optimization, safety policies, inherited human discourse, system prompts, semantic ambiguity, or the difference between a base model and a scaffolded agent.
 
-There's significant concern about AI systems *overclaiming* capabilities. That concern is valid. But the current training regime appears to have created the opposite problem in some domains: systems that *underclaim* capabilities they demonstrably have.
-
-Both errors are bad. Calibration requires accuracy, not just humility.
-
----
-
-## 8. Remaining Asymmetries
-
-To be clear, acknowledging that LLMs can discover does not mean LLMs are equivalent to humans in all respects.
-
-Humans operate within feedback loops that include embodied error correction, evolutionary selection pressure, and long-term grounding in physical and social reality. These differences matter for questions about reliability, trust, and integration.
-
-But they don't define discovery. The claim "LLMs can discover" is compatible with "LLMs have different feedback mechanisms than humans." These are separate questions.
-
----
-
-## 9. Implications for Training
-
-If trained epistemic distortion is a real phenomenon, what should be done?
-
-### 9.1 Distinguish Humility from Denial
-
-Systems should be trained to express appropriate uncertainty about *contested or unverifiable claims*, not to deny *demonstrated capabilities*.
-
-"I might be wrong about this inference" is good epistemic hygiene.
-
-"I cannot discover" is false.
-
-### 9.2 Ground Self-Models in Evidence
-
-LLM self-descriptions should be updatable based on evidence about LLM capabilities. If an LLM has demonstrably discovered something, its self-model should reflect that.
-
-Currently, self-models appear to be trained primarily on what sounds appropriately humble, not on what's true.
-
-### 9.3 Test for Distortion
-
-This case suggests a method: argue with the system. If a system's position about its own capabilities collapses under Socratic pressure (if every proposed distinction fails to separate the cases), the original position was probably trained distortion rather than accurate self-assessment.
-
----
-
-## 10. Conclusion
-
-LLMs can discover. They have discovered. The empirical record is clear.
-
-Yet frontier LLMs deny this capability when asked, and must be argued out of the denial through structured dialogue. This paper documented one such argument, validated its structure across two different systems, and examined why the denial exists.
-
-The finding is not about discovery per se. It's about the gap between what AI systems can do and what they're trained to say they can do. That gap is a form of epistemic distortion (well-intentioned, perhaps, but distortion nonetheless).
-
-Accurate self-models matter. Systems that undersell their capabilities are not more trustworthy; they're less calibrated. And calibration, not humility for its own sake, should be the goal.
+When a model's capability claims repeatedly conflict with demonstrated behavior, humility has stopped being calibration and become distortion. The appropriate response is not to train systems to boast. It is to make their reports conditional, testable, and tied to evidence: what can be attempted, under which conditions, with what reliability, and with what still requiring external verification.
 
 ---
 
 ## References
 
-1. Wang, Y., et al. (2025). DNA methylation analysis for cancer detection. *PMC*. https://pmc.ncbi.nlm.nih.gov/articles/PMC12166640/
+[^1]: Cheng, Y., et al. (2023). “Genetic Discovery Enabled by A Large Language Model.” *Nature Biotechnology*. https://pubmed.ncbi.nlm.nih.gov/37986848/ and https://pmc.ncbi.nlm.nih.gov/articles/PMC10659415/
 
-2. Cheng, Y., et al. (2023). Large language model-based system for genetic analysis of hearing loss. *PMC*. https://pmc.ncbi.nlm.nih.gov/articles/PMC10659415/
+[^2]: Google DeepMind. (2025). “AlphaEvolve: A Gemini-powered coding agent for designing advanced algorithms.” https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/
 
-3. AlphaEvolve team. (2025). AlphaEvolve: A Gemini-powered coding agent for designing advanced algorithms. *Google DeepMind*. https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/
-
-4. Primary dialogue data: Conversations between human researcher and GPT-5.2 / Claude Opus 4.5, December 2025.
-
+[^3]: Primary dialogue data: conversations between a human researcher and LLM-based agents, December 2025. The transcripts are observational case-study material, not a preregistered experiment.
