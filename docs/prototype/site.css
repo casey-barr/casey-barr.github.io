@@ -88,7 +88,7 @@ pre {
 /* ------------------------------------------------------- the column --- */
 .main { grid-column: 2; padding: 2.5rem 0 5rem; }
 /* the home page ends in the post list, which is its own grid child */
-.main--index { padding-bottom: 0.6rem; }
+.main--index { padding-top: 0; padding-bottom: 0.6rem; }
 .rail { grid-column: 1; }
 
 h1, h2, h3 { font-family: var(--serif); font-weight: 400; line-height: var(--lh-tight); }
@@ -123,6 +123,19 @@ hr { height: 0; margin: 2.5rem 0; border: 0; border-top: 1px solid var(--rule); 
  * A photograph is set as a plate in a book: inside the measure, its
  * caption under it in small sans, credited. Not a banner behind the type. */
 .plate { margin: 0 0 3rem; }
+/* A plate given the whole frame rather than the measure — rail, column and
+   sidenote margin together. It is the one image on the site, so it is allowed
+   to be the largest thing on the page; everything under it stays in the
+   column. The caption keeps the text column's left edge, so it reads as
+   belonging to the page rather than floating under a banner. */
+.plate--wide {
+  grid-column: 1 / -1;
+  margin: 2.5rem 0 3.2rem;
+  display: grid;
+  grid-template-columns: subgrid;   /* the frame's own columns, at every width */
+}
+.plate--wide img { grid-column: 1 / -1; }
+.plate--wide figcaption { grid-column: 2; }
 .plate img { display: block; width: 100%; height: auto; }
 .plate figcaption {
   margin-top: 0.5rem;
@@ -243,6 +256,7 @@ hr { height: 0; margin: 2.5rem 0; border: 0; border-top: 1px solid var(--rule); 
   }
   .main, .chrome-inner, .foot { grid-column: 1; }
   .rail { display: none; }
+  .plate--wide figcaption { grid-column: 1; }
   /* no rail column to set the dates in: they go back above the title */
   .posts { grid-column: 1; }
   .posts li { display: block; }

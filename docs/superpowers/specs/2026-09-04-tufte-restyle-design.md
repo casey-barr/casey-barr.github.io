@@ -95,10 +95,16 @@ matter.
 ## Home page
 
 Unchanged in structure pending review: the Rome photograph, then the masthead,
-then the post list. The photo is set as a **plate** — inside the measure, at
-column width, with a caption beneath it crediting the author — rather than as a
-full-bleed banner with an overlaid caption chip. The reference has no images at
-all, so this is the site's own decision rather than a borrowed one.
+then the post list. The photo is set as a **plate** — with a caption beneath it
+crediting the author — rather than as a full-bleed banner with an overlaid
+caption chip. The reference has no images at all, so this is the site's own
+decision rather than a borrowed one.
+
+The plate spans the whole frame (rail, column and sidenote margin together)
+rather than the text measure: it is the only image on the site, the arch's
+inscription is unreadable at column width, and everything beneath it stays in
+the column so the widening reads as deliberate. It uses `subgrid`, so it
+follows the frame's columns at every breakpoint without restating them.
 
 In the post list the date is set in the rail column, ranged right, instead of
 being joined to the read time on the title's line. It is the field the list is
