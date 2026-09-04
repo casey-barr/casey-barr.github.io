@@ -2,14 +2,11 @@
 layout: page.njk
 title: "About"
 permalink: /about/
-image: /assets/images/jupiter_amalthea_voyagerISS.jpg
-imageAlt: >-
-  A raw Voyager frame: Jupiter overexposed to a blank white disc at lower left,
-  the moon Amalthea a single bright point at right, and the camera's reticle
-  marks dotted across an otherwise empty black field.
+image: /images/header_images/fsu.jpg
+wide: true
+imageAlt: "The Florida State University campus."
 caption: >-
-  Jupiter, overexposed, and Amalthea. A raw frame from Voyager's Imaging Science
-  Subsystem — the grid of dots is the camera's own reticle. NASA/JPL.
+  Photo credit: <a href="https://gradschool.fsu.edu/">The Florida State University</a>
 ---
 
 I am currently located in Miami, FL. I graduated from the Florida State University in 2016, with a double major in Economics and Political Science Modeling, and a concentration in Mathematics.  

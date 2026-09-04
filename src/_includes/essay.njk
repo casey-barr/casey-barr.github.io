@@ -25,7 +25,7 @@ layout: base.njk
     {%- if image %}
     <figure class="plate">
       <img src="{{ image }}" alt="{{ imageAlt or '' }}">
-      {%- if caption %}<figcaption>{{ caption }}</figcaption>{% endif %}
+      {%- if caption %}<figcaption>{{ caption | safe }}</figcaption>{% endif %}
     </figure>
     {%- endif %}
 

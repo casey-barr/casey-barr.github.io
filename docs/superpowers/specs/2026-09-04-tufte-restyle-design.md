@@ -166,8 +166,12 @@ paginated the home page at five posts. Ten posts now sit on one page.
   than recede into being machinery.
 - **The bio card is gone.** Its image was never a portrait — it is a raw
   Voyager frame of Jupiter and Amalthea, which the old sidebar cropped to 90px
-  and stood above a name like a headshot. It is now the About page's plate, at
-  a size where the reticle marks are visible, captioned for what it is.
+  and stood above a name like a headshot.
+- **About keeps its own photograph.** The Voyager frame was briefly made the
+  About plate, which displaced the FSU photo that had always been there. That
+  was the wrong trade and it was made without asking about the FSU photo
+  directly: the page is largely about those years, so FSU is the plate and the
+  Voyager frame is unused for now.
 - **Plate width follows the image.** A panoramic photograph earns the whole
   frame; a square or tall one keeps the text measure, because at frame width it
   would be over a thousand pixels deep. Rome is wide, Amalthea is square.
