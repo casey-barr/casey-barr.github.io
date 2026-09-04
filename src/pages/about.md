@@ -4,7 +4,10 @@ title: "About"
 permalink: /about/
 image: /images/header_images/fsu.jpg
 wide: true
-imageAlt: "The Florida State University campus."
+imageAlt: >-
+  The Westcott Building at Florida State University, its brick facade and
+  central tower behind a fountain, with the university's name lettered in the
+  granite in the foreground.
 caption: >-
   Photo credit: <a href="https://gradschool.fsu.edu/">The Florida State University</a>
 ---

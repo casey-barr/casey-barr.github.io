@@ -3,10 +3,6 @@ layout: page.njk
 title: "Curriculum Vitae"
 permalink: /cv/
 ---
-**Casey C. Barr** \| Curriculum Vitæ
-
----
-
 ### Education
 
 &nbsp;&nbsp;&nbsp;&nbsp;2012–2016 \| Florida State University, Tallahassee, FL  

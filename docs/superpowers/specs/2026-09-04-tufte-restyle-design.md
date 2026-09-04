@@ -159,6 +159,29 @@ paginated the home page at five posts. Ten posts now sit on one page.
    is done the workflow will build and deploy nothing visible. ← *only
    remaining step, and it is the user's to take*
 
+## Copy changed
+
+The posts' bodies are untouched. What changed, and why:
+
+- **About**, one sentence: "see the link to the left" pointed at the sidebar
+  that no longer exists; it now points at the footer links.
+- **Headings removed** where they duplicated the page title the layout now
+  supplies: `## About Me`, and `# Tchebycheff Approach`.
+- **Titles**: About Me → About; CV → Curriculum Vitae (and the body line that
+  repeated it, "Casey C. Barr | Curriculum Vitæ", was dropped rather than the
+  title reverted); Casey C. Barr's Blog → Writing; nav Blog → Writing and
+  Reading Log → Reading.
+- **404 rewritten.** Its "Your pixels are in another canvas" line lived in
+  minimal-mistakes' `excerpt:` field and was lost in the port; it is back as
+  the standfirst. The page also loaded
+  `linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js` to render a search box
+  — that endpoint answers 404 and has for years, so the page was promising a
+  search that never appeared. Removed, and replaced with real links.
+- **Written from scratch**: the home standfirst and plate caption, descriptions
+  for the two posts that had no front matter, and the interface strings
+  (footer, "Filed under", the search placeholder, "N minute read"). The other
+  eight posts show their own first paragraph in the list, not invented copy.
+
 ## Decisions taken
 
 - **Accent: slate `#31566f`.** Cool on purpose. The Rome photograph is the only
