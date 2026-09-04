@@ -96,8 +96,8 @@ matter.
 
 Unchanged in structure pending review: the Rome photograph, then the masthead,
 then the post list. The photo is set as a **plate** — with a caption beneath it
-crediting the author — rather than as a full-bleed banner with an overlaid
-caption chip. The reference has no images at all, so this is the site's own
+reading "Photo credit: Casey C. Barr" — rather than as a full-bleed banner with
+an overlaid caption chip. The reference has no images at all, so this is the site's own
 decision rather than a borrowed one.
 
 The plate spans the whole frame (rail, column and sidenote margin together)
