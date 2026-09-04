@@ -1,0 +1,16 @@
+{# The shared post list: date in the rail column, title and dek in the text
+   column. Used by the home page and the writing archive. #}
+<ol class="posts">
+  {%- for post in postlist %}
+  <li>
+    <p class="when">
+      <time datetime="{{ post.date | isoDate }}">{{ post.date | readableDate }}</time>
+      <span class="mins">{{ post.templateContent | readingTime }} min</span>
+    </p>
+    <div class="entry">
+      <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+      <p class="dek">{{ post.data.description or (post.templateContent | firstPara) }}</p>
+    </div>
+  </li>
+  {%- endfor %}
+</ol>

@@ -1,0 +1,51 @@
+---
+layout: base.njk
+---
+{% set headings = content | toc %}
+<div class="frame">
+
+  {# The rail earns its column only when there is something to navigate. A
+     three-paragraph post gets the plain measure instead of a contents list
+     as long as the post itself. #}
+  {%- if headings.length > 1 %}
+  <nav class="rail" aria-label="Contents">
+    <div class="rail-inner">
+      <p class="rail-title">Contents</p>
+      <ol>
+        {%- for h in headings %}
+        <li{% if h.level == 3 %} class="rail-sub"{% endif %}><a href="#{{ h.id }}">{{ h.text }}</a></li>
+        {%- endfor %}
+      </ol>
+    </div>
+  </nav>
+  {%- endif %}
+
+  <main class="main" id="main">
+
+    {%- if image %}
+    <figure class="plate">
+      <img src="{{ image }}" alt="{{ imageAlt or '' }}">
+      {%- if caption %}<figcaption>{{ caption }}</figcaption>{% endif %}
+    </figure>
+    {%- endif %}
+
+    <div class="masthead">
+      <h1>{{ title }}</h1>
+    </div>
+    <p class="byline">
+      <time datetime="{{ page.date | isoDate }}">{{ page.date | readableDate }}</time>
+      · {{ content | readingTime }} minute read
+    </p>
+
+    {{ content | safe }}
+
+    {%- if topics %}
+    <p class="post-topics">Filed under
+      {%- for t in topics %} <a href="/topics/{{ t | topicSlug }}/">{{ t }}</a>{% if not loop.last %},{% endif %}{% endfor %}.
+    </p>
+    {%- endif %}
+
+  </main>
+
+  {% include "partials/footer.njk" %}
+</div>

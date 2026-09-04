@@ -1,0 +1,77 @@
+/* ------------------------------------------------------------------ *
+ * tokens.css — the site's one vocabulary of colour, type and measure.
+ * Nothing here lays anything out; site.css does that and owns --col.
+ * ------------------------------------------------------------------ */
+
+:root {
+  color-scheme: light;
+
+  /* ground and ink -------------------------------------------------- */
+  --ground: #fffff8;      /* warm paper white; the page never uses pure #fff */
+  --ink: #111;            /* body text */
+  --ink-2: #5c5c54;       /* dates, captions, read times — quiet but legible */
+  --ink-3: #86867c;       /* the quietest label; never carries meaning alone */
+
+  /* rules ----------------------------------------------------------- */
+  --hair: #e8e8df;        /* between list items: barely there */
+  --rule: #d6d6cc;        /* a rule you are meant to notice */
+  --wash: #f6f6ee;        /* a quoted panel's fill */
+
+  /* accent ---------------------------------------------------------- *
+   * One colour, and it is structural: it says "this is a control", never
+   * "this is important". Links, focus rings, the marker beside a pulled
+   * quote. Nothing decorative reaches for it. Three candidates while the
+   * prototype is being judged; the shipped site keeps exactly one.       */
+  --accent: #31566f;
+  --accent-wash: #e9edf1;
+
+  /* type ------------------------------------------------------------ */
+  --serif: "et-book", Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --mono: "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace;
+
+  /* Scale is a minor third off an 18px body, rounded to values that sit
+     on the 4px rhythm. ET Book runs small for its size, hence the 1.125rem
+     body rather than the 1rem a sans would take. */
+  --t-body: 1.125rem;
+  --t-small: 0.8125rem;   /* nav, captions, sidenotes */
+  --t-h3: 1.375rem;
+  --t-h2: 1.75rem;
+  --t-h1: 2.5rem;
+  --t-title: 3rem;        /* the masthead name and an essay's own title */
+
+  --lh-body: 1.62;        /* serif wants more air than a sans does */
+  --lh-tight: 1.15;
+
+  /* measure --------------------------------------------------------- */
+  --col: 700px;           /* ~80 characters of ET Book at 18px */
+  --rail: 200px;          /* the contents rail */
+  --margin-col: 250px;    /* where sidenotes live */
+  --gap: 40px;
+  --pad: 32px;
+
+  --bar-pad: 5px;
+  --bar-h: calc(40px + 2 * var(--bar-pad));
+}
+
+
+@media (max-width: 900px) { :root { --pad: 18px; } }
+
+/* ET Book — Edward Tufte, MIT licence. Line figures for running text so
+   numerals sit on the baseline beside capitals; old-style is kept for the
+   places that want text figures. */
+@font-face {
+  font-family: "et-book";
+  src: url("../fonts/et-book-roman-line-figures.woff") format("woff");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "et-book";
+  src: url("../fonts/et-book-display-italic-old-style-figures.woff") format("woff");
+  font-weight: 400; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: "et-book";
+  src: url("../fonts/et-book-bold-line-figures.woff") format("woff");
+  font-weight: 700; font-style: normal; font-display: swap;
+}

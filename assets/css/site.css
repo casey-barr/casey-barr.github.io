@@ -1,0 +1,341 @@
+/* ------------------------------------------------------------------ *
+ * site.css — layout and every component. Loaded after tokens.css.
+ * ------------------------------------------------------------------ */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  background: var(--ground);
+  color: var(--ink);
+  -webkit-text-size-adjust: 100%;
+  scroll-padding-top: calc(var(--bar-h) + 15px);  /* the bar is sticky; an #anchor must clear it */
+}
+
+body {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: var(--t-body);
+  line-height: var(--lh-body);
+  font-kerning: normal;
+  font-variant-ligatures: common-ligatures;
+}
+
+/* Links are underlined rather than coloured-and-underlined in prose, the
+   way a book sets them; the accent carries controls and nav instead. */
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a:hover { text-decoration-thickness: 2px; }
+
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+code { font-family: var(--mono); font-size: 0.86em; }
+pre {
+  font-family: var(--mono); font-size: var(--t-small); line-height: 1.5;
+  overflow-x: auto; padding: 1rem; background: var(--wash); border: 1px solid var(--hair);
+}
+
+.skip { position: absolute; left: -9999px; }
+.skip:focus {
+  left: 0.5rem; top: 0.5rem; z-index: 60;
+  padding: 0.6rem 0.9rem; background: var(--ground); border: 1px solid var(--accent);
+}
+
+/* -------------------------------------------------------- the frame --- *
+ * rail | column | margin, centred. The bar is laid out on the same grid,
+ * so its rule and its title land exactly where the column does at every
+ * width. That alignment is most of why this reads as built rather than
+ * themed, and it is the reason both share one template.                   */
+.frame, .chrome {
+  display: grid;
+  grid-template-columns: var(--rail) minmax(0, var(--col)) var(--margin-col);
+  column-gap: var(--gap);
+  max-width: calc(var(--rail) + var(--col) + var(--margin-col) + 2 * var(--gap) + 2 * var(--pad));
+  margin: 0 auto;
+  padding: 0 var(--pad);
+}
+
+/* ---------------------------------------------------------- the bar --- */
+.chrome {
+  position: sticky; top: 0; z-index: 50;
+  background: var(--ground);
+}
+.chrome-inner {
+  grid-column: 2;
+  display: flex; align-items: center; gap: 17px;
+  margin: 0 calc(-1 * var(--pad));
+  padding: var(--bar-pad) var(--pad);
+  border-bottom: 1px solid var(--hair);
+}
+.site-name {
+  display: inline-flex; align-items: center; min-height: 40px;
+  margin-right: 9px; padding: 0 2px;
+  border-bottom: 2px solid transparent;
+  color: var(--ink); font-family: var(--serif); font-size: 1.0625rem;
+  text-decoration: none; white-space: nowrap;
+}
+.site-name:hover, .site-name[aria-current="page"] { border-bottom-color: var(--ink); }
+
+.nav { display: flex; gap: 2px; margin-left: auto; }
+.nav a {
+  display: flex; align-items: center; min-height: 40px;
+  padding: 0 8px;
+  border-bottom: 2px solid transparent;
+  color: var(--ink-2); font-family: var(--sans); font-size: var(--t-small);
+  text-decoration: none; white-space: nowrap;
+}
+.nav a:hover { color: var(--ink); }
+.nav a[aria-current="page"] { color: var(--ink); border-bottom-color: var(--ink); }
+
+/* ------------------------------------------------------- the column --- */
+.main { grid-column: 2; padding: 2.5rem 0 5rem; }
+/* the home page ends in the post list, which is its own grid child */
+.main--index { padding-top: 0; padding-bottom: 0.6rem; }
+.rail { grid-column: 1; }
+
+h1, h2, h3 { font-family: var(--serif); font-weight: 400; line-height: var(--lh-tight); }
+h1 { font-size: var(--t-h1); margin: 0 0 0.6rem; }
+h2 { font-size: var(--t-h2); margin: 2.6rem 0 0.5rem; }
+h3 { font-size: var(--t-h3); font-style: italic; margin: 2rem 0 0.4rem; }
+p { margin: 0 0 1.15rem; }
+
+blockquote {
+  margin: 1.6rem 0; padding: 0 0 0 1.1rem;
+  border-left: 2px solid var(--accent);
+  font-style: italic; color: var(--ink-2);
+}
+
+hr { height: 0; margin: 2.5rem 0; border: 0; border-top: 1px solid var(--rule); }
+
+/* --------------------------------------------------------- masthead --- */
+.masthead { margin-bottom: 2.2rem; }
+.masthead h1 { font-size: var(--t-title); letter-spacing: -0.01em; }
+.masthead .standfirst {
+  margin: 0; max-width: 34em;
+  color: var(--ink-2); font-size: 1.0625rem;
+}
+
+.byline {
+  margin: 0 0 2rem;
+  color: var(--ink-2); font-family: var(--sans); font-size: var(--t-small);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ------------------------------------------------------------ plate --- *
+ * A photograph is set as a plate in a book: inside the measure, its
+ * caption under it in small sans, credited. Not a banner behind the type. */
+.plate { margin: 0 0 3rem; }
+/* A plate given the whole frame rather than the measure — rail, column and
+   sidenote margin together. It is the one image on the site, so it is allowed
+   to be the largest thing on the page; everything under it stays in the
+   column. The caption keeps the text column's left edge, so it reads as
+   belonging to the page rather than floating under a banner. */
+.plate--wide {
+  grid-column: 1 / -1;
+  margin: 2.5rem 0 3.2rem;
+  display: grid;
+  grid-template-columns: subgrid;   /* the frame's own columns, at every width */
+}
+.plate--wide img { grid-column: 1 / -1; }
+.plate--wide figcaption { grid-column: 2; }
+.plate img { display: block; width: 100%; height: auto; }
+.plate figcaption {
+  margin-top: 0.5rem;
+  color: var(--ink-2); font-family: var(--sans); font-size: var(--t-small); line-height: 1.45;
+}
+
+/* ------------------------------------------------------- post list --- *
+ * The date is set in the rail column, not joined to the title's line. It
+ * is the one thing every entry shares and the one thing you scan the list
+ * by, so it gets a column of its own and the titles keep a clean left
+ * edge. Ranged right, so the dates sit against the gap that separates
+ * them from the text they belong to.                                      */
+.posts {
+  grid-column: 1 / 3;
+  margin: 0; padding: 0; list-style: none;
+}
+.posts li {
+  display: grid;
+  grid-template-columns: var(--rail) minmax(0, var(--col));
+  column-gap: var(--gap);
+  padding: 1.15rem 0;
+  border-top: 1px solid var(--hair);
+}
+.posts li:first-child { border-top: 1px solid var(--rule); }
+.posts .when {
+  grid-column: 1;
+  margin: 0; padding-top: 0.4rem;
+  text-align: right;
+  color: var(--ink-3); font-family: var(--sans); font-size: var(--t-small); line-height: 1.35;
+  font-variant-numeric: tabular-nums;
+}
+.posts .when .mins { display: block; }
+.posts .entry { grid-column: 2; }
+.posts h2 {
+  margin: 0 0 0.2rem;
+  font-size: var(--t-h3); line-height: 1.25;
+}
+.posts h2 a { color: var(--ink); text-decoration: none; }
+.posts h2 a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.posts .dek { margin: 0; color: var(--ink-2); font-size: 1.0625rem; line-height: 1.5; }
+
+.section-head {
+  margin: 0 0 0.9rem;
+  font-family: var(--sans); font-size: var(--t-small); font-weight: 600;
+  color: var(--ink-2);
+}
+
+/* ------------------------------------------------------------- rail --- */
+.rail-inner {
+  position: sticky; top: calc(var(--bar-h) + 2.5rem);
+  font-family: var(--sans); font-size: var(--t-small); line-height: 1.4;
+}
+.rail-title { margin: 0 0 0.6rem; color: var(--ink-3); }
+.rail ol { margin: 0; padding: 0; list-style: none; }
+.rail ol ol { margin: 0.25rem 0 0.4rem 0.75rem; }
+.rail li { margin: 0 0 0.45rem; }
+.rail a {
+  color: var(--ink-2); text-decoration: none;
+  border-left: 2px solid transparent; margin-left: -10px; padding-left: 8px;
+  display: block;
+}
+.rail a:hover { color: var(--ink); }
+.rail a.is-current { color: var(--ink); border-left-color: var(--accent); }
+
+/* -------------------------------------------------------- sidenotes --- *
+ * Written as ordinary kramdown footnotes; a script lifts them out here at
+ * widths that have a margin to put them in, and leaves them as footnotes
+ * at widths that do not. Floated rather than positioned, so several in a
+ * row stack instead of landing on top of each other.                      */
+.sidenote {
+  float: right; clear: right;
+  width: var(--margin-col);
+  margin-right: calc(-1 * (var(--margin-col) + var(--gap)));
+  margin-bottom: 1rem;
+  font-family: var(--sans); font-size: var(--t-small); line-height: 1.45;
+  color: var(--ink-2);
+  text-align: left;
+}
+.sidenote-number {
+  font-family: var(--sans); font-size: 0.7em; font-variant-numeric: tabular-nums;
+  color: var(--accent);
+  vertical-align: super; line-height: 0;
+  padding: 0 0.1em;
+}
+.sidenote p { margin: 0 0 0.6rem; }
+.sidenote p:last-child { margin-bottom: 0; }
+/* the same number again at the head of the note, but run into its first line
+   rather than raised off it — superscript is for the reference, not the note */
+.sidenote .sidenote-number {
+  vertical-align: baseline;
+  line-height: inherit;
+  font-size: 0.9em;
+  padding: 0;
+}
+
+/* the footnote list, shown only when the notes are not in the margin */
+.footnotes { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 1rem; }
+.footnotes p { margin: 0 0 0.6rem; }
+[hidden] { display: none !important; }
+
+/* --------------------------------------------------------- footer --- */
+.foot {
+  grid-column: 2;
+  padding: 1.2rem 0 3rem; border-top: 1px solid var(--hair);
+  color: var(--ink-3); font-family: var(--sans); font-size: var(--t-small);
+  display: flex; gap: 1rem; flex-wrap: wrap;
+}
+.foot a { color: var(--ink-2); text-decoration: none; }
+.foot a:hover { color: var(--ink); text-decoration: underline; }
+
+/* ------------------------------------------------------ narrowing --- *
+ * Three steps, each dropping the outermost thing the width can no longer
+ * hold: first the rail, then the margin the sidenotes live in.            */
+@media (max-width: 1300px) {
+  .frame, .chrome {
+    grid-template-columns: minmax(0, var(--col)) var(--margin-col);
+    max-width: calc(var(--col) + var(--margin-col) + var(--gap) + 2 * var(--pad));
+  }
+  .main, .chrome-inner, .foot { grid-column: 1; }
+  .rail { display: none; }
+  .plate--wide figcaption { grid-column: 1; }
+  /* no rail column to set the dates in: they go back above the title */
+  .posts { grid-column: 1; }
+  .posts li { display: block; }
+  .posts .when {
+    padding-top: 0; margin-bottom: 0.3rem;
+    text-align: left;
+  }
+  .posts .when .mins { display: inline; }
+  .posts .when .mins::before { content: "  ·  "; }
+}
+@media (max-width: 1000px) {
+  .frame, .chrome {
+    grid-template-columns: minmax(0, var(--col));
+    max-width: calc(var(--col) + 2 * var(--pad));
+  }
+  .sidenote {
+    float: none; width: auto; margin-right: 0;
+    display: block; padding: 0.6rem 0 0.6rem 0.9rem;
+    border-left: 2px solid var(--hair);
+    margin-bottom: 1.15rem;
+  }
+}
+@media (max-width: 620px) {
+  :root { --t-title: 2.125rem; --t-h1: 1.875rem; --t-h2: 1.5rem; --t-h3: 1.25rem; }
+
+  /* Six labels and the name do not fit one 390px row, so the name takes a
+     row of its own and the labels range across the one beneath it. Two rows
+     is only affordable if the bar stops being sticky — 80px of pinned chrome
+     on a phone is most of what you can see of a paragraph — so it scrolls
+     away here and the reader gets the screen back. */
+  .chrome { position: static; }
+  .chrome-inner { flex-wrap: wrap; gap: 0; padding-bottom: 0; }
+  .site-name { width: 100%; min-height: 34px; margin-right: 0; }
+  .nav {
+    width: 100%; margin-left: -8px;
+    justify-content: space-between;
+  }
+  .nav a { min-height: 38px; padding: 0 6px; }
+
+  html { scroll-padding-top: 15px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition-duration: 0.01ms !important; }
+}
+
+/* ------------------------------------------------------- searchbox --- *
+ * A filter over a list already on the page. It is shown only once the
+ * script that makes it work has run, so it is never present and dead.    */
+.searchbox { display: flex; margin: 0 0 1rem; }
+.searchbox input {
+  flex: 1 1 auto; min-width: 0; min-height: 42px;
+  padding: 0 0.7rem;
+  background: var(--wash);
+  border: 1px solid var(--rule); border-radius: 0;
+  font-family: var(--sans); font-size: var(--t-small); color: var(--ink);
+}
+.searchbox input::placeholder { color: var(--ink-3); }
+.state {
+  margin: 0 0 1rem;
+  color: var(--ink-3); font-family: var(--sans); font-size: var(--t-small);
+}
+
+/* the rail's second level, for h3s inside a long essay */
+.rail-sub { margin-left: 0.85rem; }
+.rail-sub a { font-size: 0.95em; }
+
+/* ---------------------------------------------------------- topics --- */
+.topics { margin: 0.4rem 0 0; padding: 0; list-style: none;
+          display: flex; flex-wrap: wrap; gap: 0.3rem 1rem; }
+.topics a { color: var(--ink-2); font-family: var(--sans); font-size: var(--t-small);
+            text-decoration: none; }
+.topics a:hover { color: var(--ink); text-decoration: underline; }
+.topics .n { color: var(--ink-3); font-variant-numeric: tabular-nums; }
+
+.post-topics {
+  margin: 3rem 0 0; padding-top: 1rem; border-top: 1px solid var(--hair);
+  font-family: var(--sans); font-size: var(--t-small); color: var(--ink-3);
+}
+.post-topics a { color: var(--ink-2); text-decoration: none; }
+.post-topics a:hover { color: var(--ink); text-decoration: underline; }

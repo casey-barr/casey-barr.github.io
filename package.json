@@ -1,0 +1,32 @@
+{
+  "name": "casey-barr.github.io",
+  "version": "1.0.0",
+  "description": "Personal site of Casey C. Barr",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "serve": "eleventy --serve",
+    "build": "eleventy",
+    "debug": "eleventy --dryrun"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/casey-barr/casey-barr.github.io.git"
+  },
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/casey-barr/casey-barr.github.io/issues"
+  },
+  "homepage": "https://github.com/casey-barr/casey-barr.github.io#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.6",
+    "@11ty/eleventy-plugin-rss": "^3.0.0",
+    "@vscode/markdown-it-katex": "^1.1.2",
+    "katex": "^0.18.5",
+    "markdown-it": "^15.0.1",
+    "markdown-it-anchor": "^9.2.1",
+    "markdown-it-footnote": "^4.0.0"
+  },
+  "private": true
+}
