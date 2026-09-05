@@ -177,7 +177,12 @@ The posts' bodies are untouched. What changed, and why:
   `linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js` to render a search box
   — that endpoint answers 404 and has for years, so the page was promising a
   search that never appeared. Removed, and replaced with real links.
-- **Written from scratch**: the home standfirst and plate caption, descriptions
+- **Home standfirst**, replaced 2026-09-05 at Casey's request. The first
+  draft ("mostly about what happens when a model meets the world it was built
+  to describe") was invented characterisation of his writing; it now names the
+  three things the site actually holds. The same line is the site description
+  and the feed subtitle, so all three are kept in step from `site.json`.
+- **Also written from scratch**: the plate caption, descriptions
   for the two posts that had no front matter, and the interface strings
   (footer, "Filed under", the search placeholder, "N minute read"). The other
   eight posts show their own first paragraph in the list, not invented copy.
