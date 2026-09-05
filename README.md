@@ -66,7 +66,7 @@ assets/
   css/             tokens.css is the vocabulary; site.css is everything else
   fonts/           ET Book, self-hosted
   katex/           KaTeX stylesheet and fonts, self-hosted
-  js/app.js        sidenotes, the contents rail, the archive filter
+  js/app.js        sidenotes and the contents rail
 ```
 
 Nothing is fetched from a CDN at read time; the only JavaScript is one 3 KB

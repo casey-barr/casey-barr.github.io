@@ -9,15 +9,6 @@ permalink: /posts/
       <h1>Writing</h1>
     </div>
 
-    {# Search is a filter over a list that is already fully on the page, so it
-       needs no index, no bundle and no network. With ten posts that is the
-       whole feature; if the archive ever outgrows one page this becomes a
-       real index instead. #}
-    <form class="searchbox" role="search" onsubmit="return false" hidden>
-      <label class="skip" for="q">Search writing</label>
-      <input id="q" type="search" autocomplete="off" placeholder="Filter by title or subject" data-filter>
-    </form>
-    <p class="state" data-filter-status aria-live="polite" hidden></p>
   </main>
 
   {% set postlist = collections.posts %}

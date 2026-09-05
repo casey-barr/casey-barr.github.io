@@ -102,10 +102,11 @@ the headings that got ids and there is no second slugifier to drift out of
 step. Shown only when a post has more than one heading. An IntersectionObserver
 marks the section being read.
 
-**Search.** lunr is dropped. The archive filters a list that is already fully
-in the page, so it needs no index, no bundle and no network. Its input is
-revealed by the script that makes it work, so a reader without JS is never
-shown a dead search box.
+**Search: none.** lunr was dropped with the theme, briefly replaced by a filter
+over the archive, and then removed entirely on 2026-09-05 at Casey's request —
+the whole archive is ten entries on one page, which is faster to read than to
+filter. The box was a solution to a problem the site does not have. Worth
+revisiting only when the archive stops fitting on one screen.
 
 **Math.** KaTeX at **build time**, not in the browser. Client-side rendering
 cannot work: CommonMark's escape rule consumes `\{` and `\,` before any script
@@ -184,7 +185,7 @@ The posts' bodies are untouched. What changed, and why:
   and the feed subtitle, so all three are kept in step from `site.json`.
 - **Also written from scratch**: the plate caption, descriptions
   for the two posts that had no front matter, and the interface strings
-  (footer, "Filed under", the search placeholder, "N minute read"). The other
+  (footer, "Filed under", "N minute read"). The other
   eight posts show their own first paragraph in the list, not invented copy.
 
 ## Decisions taken

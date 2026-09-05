@@ -85,36 +85,3 @@
   targets.forEach((t) => io.observe(t));
 })();
 
-/* 3. Archive filter. Hides post entries that do not match what is typed.
- *    The whole archive is already in the page, so this needs no index and
- *    no network — and the input is revealed only from here, so a reader
- *    without JS is never shown a search box that cannot search. */
-(function archiveFilter() {
-  const input = document.querySelector('[data-filter]');
-  const list = document.querySelector('.posts');
-  if (!input || !list) return;
-
-  const status = document.querySelector('[data-filter-status]');
-  const entries = [...list.querySelectorAll('li')].map((li) => ({
-    li,
-    text: li.textContent.toLowerCase(),
-  }));
-
-  input.closest('.searchbox').hidden = false;
-
-  const run = () => {
-    const q = input.value.trim().toLowerCase();
-    let shown = 0;
-    entries.forEach((e) => {
-      const hit = !q || e.text.includes(q);
-      e.li.hidden = !hit;
-      if (hit) shown++;
-    });
-    if (!status) return;
-    status.hidden = !q;
-    status.textContent = shown === 1 ? '1 post' : shown + ' posts';
-  };
-
-  input.addEventListener('input', run);
-  run();
-})();

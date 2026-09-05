@@ -304,23 +304,6 @@ hr { height: 0; margin: 2.5rem 0; border: 0; border-top: 1px solid var(--rule); 
   * { transition-duration: 0.01ms !important; }
 }
 
-/* ------------------------------------------------------- searchbox --- *
- * A filter over a list already on the page. It is shown only once the
- * script that makes it work has run, so it is never present and dead.    */
-.searchbox { display: flex; margin: 0 0 1rem; }
-.searchbox input {
-  flex: 1 1 auto; min-width: 0; min-height: 42px;
-  padding: 0 0.7rem;
-  background: var(--wash);
-  border: 1px solid var(--rule); border-radius: 0;
-  font-family: var(--sans); font-size: var(--t-small); color: var(--ink);
-}
-.searchbox input::placeholder { color: var(--ink-3); }
-.state {
-  margin: 0 0 1rem;
-  color: var(--ink-3); font-family: var(--sans); font-size: var(--t-small);
-}
-
 /* the rail's second level, for h3s inside a long essay */
 .rail-sub { margin-left: 0.85rem; }
 .rail-sub a { font-size: 0.95em; }
