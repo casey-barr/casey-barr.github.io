@@ -1,6 +1,6 @@
 ---
 layout: page.njk
-title: "Curriculum Vitae"
+title: "Curriculum Vitæ"
 permalink: /cv/
 ---
 ### Education

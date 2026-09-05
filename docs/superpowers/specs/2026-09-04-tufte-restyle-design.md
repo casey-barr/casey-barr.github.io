@@ -167,9 +167,9 @@ The posts' bodies are untouched. What changed, and why:
   that no longer exists; it now points at the footer links.
 - **Headings removed** where they duplicated the page title the layout now
   supplies: `## About Me`, and `# Tchebycheff Approach`.
-- **Titles**: About Me → About; CV → Curriculum Vitae (and the body line that
-  repeated it, "Casey C. Barr | Curriculum Vitæ", was dropped rather than the
-  title reverted); Casey C. Barr's Blog → Writing; nav Blog → Writing and
+- **Titles**: About Me → About; CV → Curriculum Vitæ, keeping the ligature Casey
+  had used in the body line; that body line, which repeated the title, was
+  dropped rather than the title reverted; Casey C. Barr's Blog → Writing; nav Blog → Writing and
   Reading Log → Reading.
 - **404 rewritten.** Its "Your pixels are in another canvas" line lived in
   minimal-mistakes' `excerpt:` field and was lost in the port; it is back as
