@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="en">
+<head>
+{% include "partials/head.njk" %}
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+{% include "partials/chrome.njk" %}
+{{ content | safe }}
+<script src="/assets/js/app.js"></script>
+</body>
+</html>

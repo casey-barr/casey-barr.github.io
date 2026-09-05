@@ -1,0 +1,23 @@
+---
+layout: base.njk
+pagination:
+  data: collections.topics
+  size: 1
+  alias: topic
+permalink: "/topics/{{ topic.slug }}/"
+eleventyComputed:
+  title: "{{ topic.name }}"
+---
+<div class="frame">
+  <main class="main" id="main">
+    <div class="masthead">
+      <h1>{{ topic.name }}</h1>
+      <p class="standfirst">{{ topic.posts.length }} post{% if topic.posts.length != 1 %}s{% endif %} on this subject. <a href="/topics/">All topics</a>.</p>
+    </div>
+  </main>
+
+  {% set postlist = topic.posts %}
+  {% include "postlist.njk" %}
+
+  {% include "partials/footer.njk" %}
+</div>

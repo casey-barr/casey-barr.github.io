@@ -1,0 +1,10 @@
+---
+layout: page.njk
+title: "Topics"
+permalink: /topics/
+---
+<ul class="topics">
+  {%- for topic in collections.topics %}
+  <li><a href="/topics/{{ topic.slug }}/">{{ topic.name }}</a> <span class="n">{{ topic.posts.length }}</span></li>
+  {%- endfor %}
+</ul>

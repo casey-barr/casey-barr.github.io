@@ -1,0 +1,25 @@
+---
+layout: base.njk
+standfirst: "Mathematics, econometrics, and applied topology. Essays and notes, mostly about what happens when a model meets the world it was built to describe."
+---
+<div class="frame">
+
+  <figure class="plate plate--wide">
+    <img src="/images/header_images/rome.jpg"
+         alt="The inscribed attic of the Arch of Septimius Severus, photographed from below against an overcast sky.">
+    <figcaption>The Arch of Septimius Severus, Roman Forum. Photo credit: Casey C. Barr</figcaption>
+  </figure>
+
+  <main class="main main--index" id="main">
+    <div class="masthead">
+      <h1>{{ site.title }}</h1>
+      <p class="standfirst">{{ standfirst }}</p>
+    </div>
+    <p class="section-head">Writing</p>
+  </main>
+
+  {% set postlist = collections.posts %}
+  {% include "postlist.njk" %}
+
+  {% include "partials/footer.njk" %}
+</div>

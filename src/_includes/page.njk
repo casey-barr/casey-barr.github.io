@@ -1,0 +1,30 @@
+---
+layout: base.njk
+---
+<div class="frame">
+  {%- if image and wide %}
+  {# A panoramic image earns the whole frame; a square or tall one would be
+     over a thousand pixels deep at that width, so it keeps the measure. #}
+  <figure class="plate{% if wide %} plate--wide{% endif %}">
+    <img src="{{ image }}" alt="{{ imageAlt or '' }}">
+    {%- if caption %}<figcaption>{{ caption | safe }}</figcaption>{% endif %}
+  </figure>
+  {%- endif %}
+
+  <main class="main{% if image and wide %} main--index{% endif %}" id="main">
+    {%- if image and not wide %}
+    <figure class="plate">
+      <img src="{{ image }}" alt="{{ imageAlt or '' }}">
+      {%- if caption %}<figcaption>{{ caption | safe }}</figcaption>{% endif %}
+    </figure>
+    {%- endif %}
+    <div class="masthead">
+      <h1>{{ title }}</h1>
+      {%- if standfirst %}<p class="standfirst">{{ standfirst }}</p>{% endif %}
+    </div>
+
+    {{ content | safe }}
+  </main>
+
+  {% include "partials/footer.njk" %}
+</div>
